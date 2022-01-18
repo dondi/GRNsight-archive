@@ -1,5 +1,5 @@
 ## GRNsight Client Side Testing Overview
-Last Updated: 2021-09-09
+Last Updated: 2022-01-18
 
 | ID | Included in Testing Protocol  | GRNsight Option |  User Action | Result | 
 | ---- |  --------------- | ------ | ------- | ------ | 
@@ -37,8 +37,7 @@ Last Updated: 2021-09-09
 |f4|NO | Dropdown Menu: File -> Export Data|Select "To Weighted SIF" | GRNsight should export a weighted SIF file from the graph currently loaded|
 |f4|NO | Dropdown Menu: File -> Export Data|Select "To Unweighted GraphML" | GRNsight should export an unweighted GraphML file from the graph currently loaded|
 |f4|NO | Dropdown Menu: File -> Export Data|Select "To Weighted GraphML" | GRNsight should export a weighted GraphML file from the graph currently loaded|
-|f4|NO | Dropdown Menu: File -> Export Data|Select "To Unweighted Excel" | GRNsight should export an unweighted Excel file from the graph currently loaded|
-|f4|NO | Dropdown Menu: File -> Export Data|Select "To Weighted Excel" | GRNsight should export a weighted Excel file from the graph currently loaded|
+|f4|NO | Dropdown Menu: File -> Export Data|Select "To Excel" | GRNsight should export an Excel file from the graph currently loaded with the chosen data|
 |f5|NO | Dropdown Menu: File -> Export Image|Select "To PNG" | GRNsight should export a PNG image from the graph currently loaded|
 |f5|NO | Dropdown Menu: File -> Export Image|Select "To SVG" | GRNsight should export a SVG image from the graph currently loaded|
 |f5|NO | Dropdown Menu: File -> Export Image|Select "To PDF" | GRNsight should export a PDF file from the graph currently loaded|
@@ -154,8 +153,7 @@ Last Updated: 2021-09-09
 | Dropdown Menu: File -> Export Data - Select "To Weighted SIF" | NO | YES | YES | 
 | Dropdown Menu: File -> Export Data - Select "To Unweighted GraphML" | NO | YES | YES | 
 | Dropdown Menu: File -> Export Data - Select "To Weighted GraphML" | NO | YES | YES | 
-| Dropdown Menu: File -> Export Data - Select "To Unweighted Excel" | NO | YES | YES | 
-| Dropdown Menu: File -> Export Data - Select "To Weighted Excel" | NO | YES | YES | 
+| Dropdown Menu: File -> Export Data - Select "To Excel" | NO | YES | YES | 
 | Dropdown Menu: File -> Export Image - Select "To PNG" | NO | YES | YES | 
 | Dropdown Menu: File -> Export Image - Select "To SVG" | NO | YES | YES | 
 | Dropdown Menu: File -> Export Image - Select "To PDF" | NO | YES | YES | 
