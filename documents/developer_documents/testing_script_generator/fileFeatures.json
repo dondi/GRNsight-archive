@@ -57,8 +57,7 @@
             "Select \"To Weighted SIF\"": "export a weighted SIF file from the graph currently loaded",
             "Select \"To Unweighted GraphML\"": "export an unweighted GraphML file from the graph currently loaded",
             "Select \"To Weighted GraphML\"": "export a weighted GraphML file from the graph currently loaded",
-            "Select \"To Unweighted Excel\"": "export an unweighted Excel file from the graph currently loaded",
-            "Select \"To Weighted Excel\"": "export a weighted Excel file from the graph currently loaded"
+            "Select \"To Excel\"": "export an Excel file from the graph currently loaded with the chosen data"
         },
         "included": false,
         "availability": {
