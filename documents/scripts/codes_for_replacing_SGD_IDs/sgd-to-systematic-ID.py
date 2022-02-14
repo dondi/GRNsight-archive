@@ -1,6 +1,6 @@
-yeastmine = open("/Users/ahmad00.m/Desktop/re-testing data/YeastNomenclature.txt")
-template = open("/Users/ahmad00.m/Desktop/re-testing data/result-of-SGD-remover.txt")
-newfile = open("/Users/ahmad00.m/Desktop/re-testing data/result-ofsgd-to-systematic-ID.txt","w")
+yeastmine = open("/Users/ahmad00.m/Desktop/exp_data_cleaning/YeastNomenclature.txt")
+template = open("/Users/ahmad00.m/Desktop/exp_data_cleaning/SGD_CORRECT_format.txt")
+newfile = open("/Users/ahmad00.m/Desktop/exp_data_cleaning/replaced_SYS_IDs.txt","w")
 
 templateDict = dict()
 for line in yeastmine:
