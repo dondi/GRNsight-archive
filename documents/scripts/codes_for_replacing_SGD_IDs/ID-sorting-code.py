@@ -4,7 +4,7 @@ newlist = []
 syslist = []
 sgdlist = []
 somelist = []
-with open("/Users/ahmad00.m/Desktop/re-testing data/wt_stem_computedaverage.txt") as f:
+with open("/Users/ahmad00.m/Desktop/exp_data_cleaning/Average_exp_data.txt") as f:
     data = f.readlines()
     count = 0
     for i in data:
@@ -21,7 +21,7 @@ with open("/Users/ahmad00.m/Desktop/re-testing data/wt_stem_computedaverage.txt"
     sys = re.compile("Y[A-P][LR][0-9][0-9][0-9][WwCc](-[A-Z])?")
     sgd = re.compile("SGD:S0000[0-9][0-9][0-9][0-9][0-9]")
     
-with open("/Users/ahmad00.m/Desktop/re-testing data/resultof-ID-sorting-code.txt", "a") as textfile:
+with open("/Users/ahmad00.m/Desktop/exp_data_cleaning/sys_SGD_ID.txt", "a") as textfile:
     for x, y in dict.items():
         # print(y)
         if len(y) > 1:
