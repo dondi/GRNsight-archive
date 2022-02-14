@@ -1,6 +1,6 @@
 stem_lines = []
 new_list = []
-with open("/Users/ahmad00.m/Desktop/re-testing data/wt_stem_computedaverage.txt") as f:
+with open("/Users/ahmad00.m/Desktop/exp_data_cleaning/systematic_IDs.txt") as f:
     data = f.readlines()
     for i in data:
         stem_lines.append(i.split())
@@ -16,7 +16,7 @@ for comparison_line in stem_lines:
             # print(current_line + comparison_line)
     current_line_index += 1
 
-with open("/Users/ahmad00.m/Desktop/re-testing data/resultof_removing_duplicates.txt", "w") as textfile:
+with open("/Users/ahmad00.m/Desktop/exp_data_cleaning/unique_sys_IDs.txt", "w") as textfile:
 
     for lists in stem_lines:
         fields = '\t'.join(lists)
