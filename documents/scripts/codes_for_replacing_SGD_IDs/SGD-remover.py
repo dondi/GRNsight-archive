@@ -1,8 +1,8 @@
 list1 = [] 
 list2 = []
 k = []
-with open("/Users/ahmad00.m/Desktop/re-testing data/Only-sgd-data.txt") as file:
-    with open("/Users/ahmad00.m/Desktop/re-testing data/result-of-SGD-remover.txt", "w") as something:
+with open("/Users/ahmad00.m/Desktop/exp_data_cleaning/SGD_incorrect_format.txt") as file:
+    with open("/Users/ahmad00.m/Desktop/exp_data_cleaning/SGD_CORRECT_format.txt", "w") as something:
         data = file.readlines()
         for i in data:
             x = (i.split())
