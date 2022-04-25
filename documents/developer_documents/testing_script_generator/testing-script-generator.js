@@ -28,8 +28,16 @@ if(options.length > 0){
 }
 
 // Imports JSON data from data.json
-const JSONFileList = ['edgeFeatures.json', 'fileFeatures.json', 'layoutFeatures.json',
-                'nodeFeatures.json', 'viewFeatures.json', 'viewportFeatures.json']
+// const JSONFileList = ['edgeFeatures.json', 'fileFeatures.json', 'layoutFeatures.json',
+//                 'nodeFeatures.json', 'viewFeatures.json', 'viewportFeatures.json']
+const JSONFileList = [
+    'edgeFeatures.json', 
+    'fileFeatures.json', 
+    'layoutFeatures.json',
+    'nodeFeatures.json', 
+    'viewFeatures.json', 
+    'viewportFeatures.json'
+]
 var grnsightOptions = JSONFileList.flatMap((fileName)=> JSON.parse(fs.readFileSync(fileName, 'utf8')) )
 // var grnsightOptions = JSON.parse(fs.readFileSync('featureList.json', 'utf8'));
 

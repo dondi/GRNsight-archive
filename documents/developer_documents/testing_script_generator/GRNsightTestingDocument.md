@@ -1,5 +1,5 @@
 ## GRNsight Client Side Testing Overview
-Last Updated: 2022-01-18
+Last Updated: 2022-04-25
 
 | ID | Included in Testing Protocol  | GRNsight Option |  User Action | Result | 
 | ---- |  --------------- | ------ | ------- | ------ | 
@@ -27,21 +27,33 @@ Last Updated: 2022-01-18
 |f1|NO | Dropdown Menu: Help|Select "GRNsight Wiki" | GRNsight should open the GRNsight wiki page|
 |f1|NO | Dropdown Menu: Help|Select "About GRNsight" | GRNsight should open the About GRNsight page|
 |f2|NO | Load Graph|None | GRNsight should have no graph in the viewport|
-|f2|NO | Load Graph|Dropdown Menu: File -> Open File | GRNsight should lay out a network graph from the Excel, SIF, or GraphML network if there are no errors in the file|
+|f2|NO | Load Graph|Dropdown Menu: Network -> Demo -> Demo #1 | GRNsight should lay out an unweighted network graph from Demo #1|
+|f2|NO | Load Graph|Dropdown Menu: Network -> Demo -> Demo #2 | GRNsight should lay out a weighted network graph from Demo #2|
+|f2|NO | Load Graph|Dropdown Menu: Network -> Demo -> Demo #3 | GRNsight should lay out an unweighted network graph from Demo #3|
+|f2|NO | Load Graph|Dropdown Menu: Network -> Demo -> Demo #4 | GRNsight should lay out a weighted network graph from Demo #4|
+|f2|NO | Load Graph|Dropdown Menu: Network -> Open File | GRNsight should lay out a network graph from the Excel, SIF, or GraphML network if there are no errors in the file|
+|f2|NO | Load Graph|Dropdwon Menu: Network -> Load From Database | GRNsight should lay out a network graph from the given genes added from the specified database source|
 |f2|NO | Load Graph|Dropdown Menu: Demo -> Demo #1 | GRNsight should lay out an unweighted network graph from Demo #1|
 |f2|NO | Load Graph|Dropdown Menu: Demo -> Demo #2 | GRNsight should lay out a weighted network graph from Demo #2|
 |f2|NO | Load Graph|Dropdown Menu: Demo -> Demo #3 | GRNsight should lay out an unweighted network graph from Demo #3|
 |f2|NO | Load Graph|Dropdown Menu: Demo -> Demo #4 | GRNsight should lay out a weighted network graph from Demo #4|
-|f3|NO | Dropdown Menu: File -> Reload|Select | The graph should center, zoom to 100%, and reapply the force graph parameters|
-|f4|NO | Dropdown Menu: File -> Export Data|Select "To Unweighted SIF" | GRNsight should export an unweighted SIF file from the graph currently loaded|
-|f4|NO | Dropdown Menu: File -> Export Data|Select "To Weighted SIF" | GRNsight should export a weighted SIF file from the graph currently loaded|
-|f4|NO | Dropdown Menu: File -> Export Data|Select "To Unweighted GraphML" | GRNsight should export an unweighted GraphML file from the graph currently loaded|
-|f4|NO | Dropdown Menu: File -> Export Data|Select "To Weighted GraphML" | GRNsight should export a weighted GraphML file from the graph currently loaded|
-|f4|NO | Dropdown Menu: File -> Export Data|Select "To Excel" | GRNsight should export an Excel file from the graph currently loaded with the chosen data|
-|f5|NO | Dropdown Menu: File -> Export Image|Select "To PNG" | GRNsight should export a PNG image from the graph currently loaded|
-|f5|NO | Dropdown Menu: File -> Export Image|Select "To SVG" | GRNsight should export a SVG image from the graph currently loaded|
-|f5|NO | Dropdown Menu: File -> Export Image|Select "To PDF" | GRNsight should export a PDF file from the graph currently loaded|
-|f6|NO | Dropdown Menu: File -> Print|Select | GRNsight should open the Print Dialogue Box|
+|f2|NO | Load Graph|Sidebar Menu: Network -> Demo -> Demo #1 | GRNsight should lay out an unweighted network graph from Demo #1|
+|f2|NO | Load Graph|Sidebar Menu: Network -> Demo -> Demo #2 | GRNsight should lay out a weighted network graph from Demo #2|
+|f2|NO | Load Graph|Sidebar Menu: Network -> Demo -> Demo #3 | GRNsight should lay out an unweighted network graph from Demo #3|
+|f2|NO | Load Graph|Sidebar Menu: Network -> Demo -> Demo #4 | GRNsight should lay out a weighted network graph from Demo #4|
+|f2|NO | Load Graph|Sidebar Menu: Network -> Open File | GRNsight should lay out a network graph from the Excel, SIF, or GraphML network if there are no errors in the file|
+|f2|NO | Load Graph|Sidebar Menu: Network -> Load From Database | GRNsight should lay out a network graph from the given genes added from the specified database source|
+|f3|NO | Reload Graph|Dropdown Menu: Network -> Reload | The graph should center, zoom to 100%, and reapply the force graph parameters|
+|f3|NO | Reload Graph|Sidebar Menu: Network -> Reload | The graph should center, zoom to 100%, and reapply the force graph parameters|
+|f4|NO | Dropdown Menu: Export -> Export Data|Select "To Unweighted SIF" | GRNsight should export an unweighted SIF file from the graph currently loaded|
+|f4|NO | Dropdown Menu: Export -> Export Data|Select "To Weighted SIF" | GRNsight should export a weighted SIF file from the graph currently loaded|
+|f4|NO | Dropdown Menu: Export -> Export Data|Select "To Unweighted GraphML" | GRNsight should export an unweighted GraphML file from the graph currently loaded|
+|f4|NO | Dropdown Menu: Export -> Export Data|Select "To Weighted GraphML" | GRNsight should export a weighted GraphML file from the graph currently loaded|
+|f4|NO | Dropdown Menu: Export -> Export Data|Select "To Excel" | GRNsight should export an Excel file from the graph currently loaded with the chosen data|
+|f5|NO | Dropdown Menu: Export -> Export Image|Select "To PNG" | GRNsight should export a PNG image from the graph currently loaded|
+|f5|NO | Dropdown Menu: Export -> Export Image|Select "To SVG" | GRNsight should export a SVG image from the graph currently loaded|
+|f5|NO | Dropdown Menu: Export -> Export Image|Select "To PDF" | GRNsight should export a PDF file from the graph currently loaded|
+|f6|NO | Dropdown Menu: Export -> Print|Select | GRNsight should open the Print Dialogue Box|
 |l1|YES | Sidebar Menu: Grid Layout|Keep at Default | The graph should default to force graph layout|
 |l1|YES | Sidebar Menu: Grid Layout|Click Grid Layout Button | The graph should change to grid layout|
 |l1|YES | Sidebar Menu: Grid Layout|Click Force Graph Layout Button | The graph should change to force graph layout|
@@ -88,8 +100,6 @@ Last Updated: 2022-01-18
 |n11|NO | Sidebar Menu: Node Coloring Toggle Button|Click |  Node coloring should toggle between on and off, with default being on, if expression data sheets are present in input workbook|
 |n12|YES | Dropdown Menu: Node -> Enable Node Coloring|Check |  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook|
 |n12|YES | Dropdown Menu: Node -> Enable Node Coloring|Uncheck |  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook|
-|s1|NO | Dropdown Menu: Species -> Current Species|Select a species |  Opening gene information pages will use information of the selected species.|
-|s2|NO | Sidebar Menu: Species -> Current Species|Select a species from a dropdown list |  Opening gene information pages will use information of the selected species.|
 |v1|NO | Sidebar Menu: Restrict Graph to Viewport Checkbox|Check | The graph bounding box should always be contained within the viewport.|
 |v1|NO | Sidebar Menu: Restrict Graph to Viewport Checkbox|Uncheck | The graph bounding box should be allowed to extend past the viewport|
 |v2|NO | Sidebar Menu: Viewport Size|Keep as Detected |  Upon loading or reloading the GRNsight webpage, the viewport size should be automatically detected and set to small, medium, or large, based on the size of the browser window.|
@@ -143,21 +153,33 @@ Last Updated: 2022-01-18
 | Dropdown Menu: Help - Select "GRNsight Wiki" | YES | YES | YES | 
 | Dropdown Menu: Help - Select "About GRNsight" | YES | YES | YES | 
 | Load Graph - None | YES | YES | YES | 
-| Load Graph - Dropdown Menu: File -> Open File | YES | YES | YES | 
+| Load Graph - Dropdown Menu: Network -> Demo -> Demo #1 | YES | YES | YES | 
+| Load Graph - Dropdown Menu: Network -> Demo -> Demo #2 | YES | YES | YES | 
+| Load Graph - Dropdown Menu: Network -> Demo -> Demo #3 | YES | YES | YES | 
+| Load Graph - Dropdown Menu: Network -> Demo -> Demo #4 | YES | YES | YES | 
+| Load Graph - Dropdown Menu: Network -> Open File | YES | YES | YES | 
+| Load Graph - Dropdwon Menu: Network -> Load From Database | YES | YES | YES | 
 | Load Graph - Dropdown Menu: Demo -> Demo #1 | YES | YES | YES | 
 | Load Graph - Dropdown Menu: Demo -> Demo #2 | YES | YES | YES | 
 | Load Graph - Dropdown Menu: Demo -> Demo #3 | YES | YES | YES | 
 | Load Graph - Dropdown Menu: Demo -> Demo #4 | YES | YES | YES | 
-| Dropdown Menu: File -> Reload - Select | NO | YES | YES | 
-| Dropdown Menu: File -> Export Data - Select "To Unweighted SIF" | NO | YES | YES | 
-| Dropdown Menu: File -> Export Data - Select "To Weighted SIF" | NO | YES | YES | 
-| Dropdown Menu: File -> Export Data - Select "To Unweighted GraphML" | NO | YES | YES | 
-| Dropdown Menu: File -> Export Data - Select "To Weighted GraphML" | NO | YES | YES | 
-| Dropdown Menu: File -> Export Data - Select "To Excel" | NO | YES | YES | 
-| Dropdown Menu: File -> Export Image - Select "To PNG" | NO | YES | YES | 
-| Dropdown Menu: File -> Export Image - Select "To SVG" | NO | YES | YES | 
-| Dropdown Menu: File -> Export Image - Select "To PDF" | NO | YES | YES | 
-| Dropdown Menu: File -> Print - Select | NO | YES | YES | 
+| Load Graph - Sidebar Menu: Network -> Demo -> Demo #1 | YES | YES | YES | 
+| Load Graph - Sidebar Menu: Network -> Demo -> Demo #2 | YES | YES | YES | 
+| Load Graph - Sidebar Menu: Network -> Demo -> Demo #3 | YES | YES | YES | 
+| Load Graph - Sidebar Menu: Network -> Demo -> Demo #4 | YES | YES | YES | 
+| Load Graph - Sidebar Menu: Network -> Open File | YES | YES | YES | 
+| Load Graph - Sidebar Menu: Network -> Load From Database | YES | YES | YES | 
+| Reload Graph - Dropdown Menu: Network -> Reload | NO | YES | YES | 
+| Reload Graph - Sidebar Menu: Network -> Reload | NO | YES | YES | 
+| Dropdown Menu: Export -> Export Data - Select "To Unweighted SIF" | NO | YES | YES | 
+| Dropdown Menu: Export -> Export Data - Select "To Weighted SIF" | NO | YES | YES | 
+| Dropdown Menu: Export -> Export Data - Select "To Unweighted GraphML" | NO | YES | YES | 
+| Dropdown Menu: Export -> Export Data - Select "To Weighted GraphML" | NO | YES | YES | 
+| Dropdown Menu: Export -> Export Data - Select "To Excel" | NO | YES | YES | 
+| Dropdown Menu: Export -> Export Image - Select "To PNG" | NO | YES | YES | 
+| Dropdown Menu: Export -> Export Image - Select "To SVG" | NO | YES | YES | 
+| Dropdown Menu: Export -> Export Image - Select "To PDF" | NO | YES | YES | 
+| Dropdown Menu: Export -> Print - Select | NO | YES | YES | 
 | Sidebar Menu: Grid Layout - Keep at Default | YES | YES | YES | 
 | Sidebar Menu: Grid Layout - Click Grid Layout Button | YES | YES | YES | 
 | Sidebar Menu: Grid Layout - Click Force Graph Layout Button | YES | YES | YES | 
@@ -204,8 +226,6 @@ Last Updated: 2022-01-18
 | Sidebar Menu: Node Coloring Toggle Button - Click | NO | YES | YES | 
 | Dropdown Menu: Node -> Enable Node Coloring - Check | NO | YES | YES | 
 | Dropdown Menu: Node -> Enable Node Coloring - Uncheck | NO | YES | YES | 
-| Dropdown Menu: Species -> Current Species - Select a species | YES | YES | YES | 
-| Sidebar Menu: Species -> Current Species - Select a species from a dropdown list | YES | YES | YES | 
 | Sidebar Menu: Restrict Graph to Viewport Checkbox - Check | YES | YES | YES | 
 | Sidebar Menu: Restrict Graph to Viewport Checkbox - Uncheck | YES | YES | YES | 
 | Sidebar Menu: Viewport Size - Keep as Detected | YES | YES | YES | 

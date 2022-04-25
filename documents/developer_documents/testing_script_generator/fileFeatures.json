@@ -36,7 +36,7 @@
             "Sidebar Menu: Network -> Demo -> Demo #3": "lay out an unweighted network graph from Demo #3",
             "Sidebar Menu: Network -> Demo -> Demo #4": "lay out a weighted network graph from Demo #4",
             "Sidebar Menu: Network -> Open File": "lay out a network graph from the Excel, SIF, or GraphML network if there are no errors in the file",
-            "Sidebar Menu: Network -> Load From Database": "lay out a network graph from the given genes added from the specified database source",
+            "Sidebar Menu: Network -> Load From Database": "lay out a network graph from the given genes added from the specified database source"
         },
         "included": false,
         "availability": {
@@ -50,7 +50,7 @@
         "title": "Reload Graph",
         "text": "The graph should",
         "options": {
-            "Dropdown Menu: Network -> Reload" : "center, zoom to 100%, and reapply the force graph parameters"
+            "Dropdown Menu: Network -> Reload" : "center, zoom to 100%, and reapply the force graph parameters",
             "Sidebar Menu: Network -> Reload" : "center, zoom to 100%, and reapply the force graph parameters"
         },
         "included": false,
