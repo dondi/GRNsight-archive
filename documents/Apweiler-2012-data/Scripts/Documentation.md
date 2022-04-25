@@ -184,3 +184,7 @@
     - Type "threshold_b" in cell B1 
     - Copy all the gene id's from you network in column A starting at cell A2 
     - Write all 0 for Column B ending in B16
+_REPEAT THE ABOVE STEPS FOR ALL YOUR NETWORKS_
+
+**Run GRNmap on the input workbooks**
+- Open Matlab application
