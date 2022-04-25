@@ -137,9 +137,50 @@
 
 
 **Visualizing your Gene Regulatory Networks with GRNsight**
-- open [GRNsight](https://dondi.github.io/GRNsight/)
+- Open [GRNsight](https://dondi.github.io/GRNsight/)
 -	Click on “File” from the top bar
 -	Then click on “Open file”
 -	Navigate through your adjacency matrix file that you saved in .xlsx
 -	Then click on “upload”
 -	You should now be able to visualize your GRN (you will get some warnings, but you can ignore them)
+
+**Create Network using SGD database**
+- The matrices were created for the same genes as the Yeastract networks using our database
+- _This step needs to be updated to reflect the actual steps of the process_ 
+
+**Create GRNmap input workbooks**
+- Open the Excel file containing your network
+- Insert a new sheet and name it production_rates
+    - Type "id" in cell A1
+    - Type "production_rate" in cell B1
+    - Copy all the gene id's from you network in column A starting at cell A2 
+    - Write their respective production_rates in column B starting at cell B2
+- Insert a new sheet and name it degradation_rates
+    - Type "id" in cell A1
+    - Type "degradation_rate" in cell B1
+    - Copy all the gene id's from you network in column A starting at cell A2 
+    - Write their respective degradation_rates in column B starting at cell B2
+- Obtaining production rates and degredation rates for genes in network
+    - Open get_production_degradation_rates.py file
+    - Modify the GENES list by replacing the genes for which you want to get the production/degredation rates
+    - On line 38 and 39 of the code input your login information to connect to postgres
+    - After the code is run a folder on your desktop called script-results is obtained which contains the degredation and production rates of genes
+    - For missing degredation rates use `0.0990`
+    - For missing production rates use `0.1980`
+- Insert a new sheet and name it wt_log2_expression
+    - Type "id" in cell A1
+    - Type the timepoints of the experiment (0, 3, 7.5, 15 ...) into cell B1 - J1 respectively 
+    - Copy all the gene id's from you network in column A starting at cell A2 
+    - Look up and copy each gene from the original file containing the expression data and paste them into their corresponding gene row
+- Insert a new sheet and name it network_weights
+    - Should look exactly like the network sheet so just copy and paste that sheet 
+- Insert a new sheet and name it optimization_parameters 
+    - Type "optimization_parameter" in cell A1
+    - Type "value" in cell B1
+    - Type "alpha", "kk_max", "MaxIter", "TolFun", "MaxFunEval", "TolX", "production_function", "L_curve", "estimate_params", "make_graphs", "fix_P", "fix_b", "expression_timepoints", "Strain", "simulation_timepoints", "species", "taxon_id" in column A starting at cell A2
+    - Type "0.002", "1", "100000000", "0.000001", "100000000", "0.000001", "Sigmoid", "0", "1", "0", "0", "0, 3, 7.5, 15, 30, 60, 110, 150, 300", "wt", "0, 25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300", "Saccharomyces cerevisiae", "559292" in column B starting at cell B2
+- Insert a new sheet and name it threshold_b 
+    - Type "id" in cell A1
+    - Type "threshold_b" in cell B1 
+    - Copy all the gene id's from you network in column A starting at cell A2 
+    - Write all 0 for Column B ending in B16
