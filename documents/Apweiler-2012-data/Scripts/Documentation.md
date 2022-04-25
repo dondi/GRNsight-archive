@@ -186,5 +186,6 @@
     - Write all 0 for Column B ending in B16
 _REPEAT THE ABOVE STEPS FOR ALL YOUR NETWORKS_
 
+_THE FOLLOWING STEPS WERE DONE USING THE COMPUTER IN DR.DAHLQUIST'S LAB IN FLSB_
 **Run GRNmap on the input workbooks**
 - Open Matlab application
