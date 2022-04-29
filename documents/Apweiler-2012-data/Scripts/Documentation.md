@@ -3,7 +3,7 @@
 -	Download the excel file from the following link [expression_data](https://github.com/dondi/GRNsight-archive/blob/main/documents/Source_data/expression_Data/GSE33097_s257_final-4.xlsx)
 -	Add this excel file to exp_data_cleaning folder 
 
-**Editing the excel file**
+**Editing the Excel file**
 -	Change the headings (row 1) of columns D-U from wt-matA_(time)min_nbr029-a format to (time)m format (e.g., wt-matA_0min_nbr029-a to 0m) 
 -	Change the heading of A1 cell to GeneSymbol
 -	Delete column B & C
@@ -112,7 +112,7 @@
 -	A new window pops up and select “Regulation matrix (semicolon separated values (CSV) file)”
 -	Rename it into “Regulation_matrix_profile#” where # is the number of profile used
 
-**Fromating file in excel to be compatible with GRNsight**
+**Formating file in Excel to be compatible with GRNsight**
 - open the first adjacency matrix
 -	Select column A 
 -	Go to “Data” tab and select “Text to columns”
@@ -188,4 +188,10 @@ _REPEAT THE ABOVE STEPS FOR ALL YOUR NETWORKS_
 
 _THE FOLLOWING STEPS WERE DONE USING THE COMPUTER IN DR.DAHLQUIST'S LAB IN FLSB_
 **Run GRNmap on the input workbooks**
-- Open Matlab application
+- Open GRNmap-1.10 folder/matlab/GRNmodel.m using MatLab application 
+- From the top bar select the downward arrow under Run button and select Run: GRNmodel (A new window should pop up)
+- locate the input workbook files created in the previous section and select one and click open 
+- The program should start running the differential equations on the input workbooks
+- This was done for all the input workbooks created in the last section 
+- The results of the program are saved in the same folder of the input workbook which were then uploaded to [DahlquistLab](https://github.com/kdahlquist/DahlquistLab) repository 
+- Close the application and then log out of the account
