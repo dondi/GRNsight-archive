@@ -12,8 +12,6 @@ for comparison_line in stem_lines:
         current_expressions = current_line[1:]
         if comparison_expressions == current_expressions:
             stem_lines.remove(current_line)
-            # new_list.append(current_line)
-            # print(current_line + comparison_line)
     current_line_index += 1
 
 with open("/Users/ahmad00.m/Desktop/exp_data_cleaning/unique_sys_IDs.txt", "w") as textfile:
