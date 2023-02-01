@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ex1",
+    "title": "Dropdown Menu: Export -> Export Data",
+    "text": "The data should",
+    "options": {
+      "To Unweighted SIF": "data is exported to unweighted SIF",
+      "To Weighted SIF": "data is exported to weighted SIF",
+      "To Unweighted GraphML": "data is exported to unweighted GraphML",
+      "To Weighted GraphML": "data is exported to weighted GraphML",
+      "To Excel": "data is exported to excel"
+    },
+    "included": false,
+    "availability": {
+      "NoGraphLoaded": false,
+      "WeightedGraphLoaded": true,
+      "UnWeightedGraphLoaded": false
+    }
+  },
+  {
+    "id": "ex2",
+    "title": "Dropdown Menu: Export -> Export Image",
+    "text": "The image of the graph should",
+    "options": {
+      "To PNG": "the image of the graph is exported as a PNG",
+      "To SVG": "the image of the graph is exported as an SVG",
+      "To PDF": "the image of the graph is exported as a PDF"
+    },
+    "included": false,
+    "availability": {
+      "NoGraphLoaded": false,
+      "WeightedGraphLoaded": true,
+      "UnWeightedGraphLoaded": false
+    }
+  },
+  {
+    "id": "ex3",
+    "title": "Dropdown Menu: Export -> Print",
+    "text": "The image of the graph should",
+    "options": {
+      "Print": "the image of the graph should print"
+    },
+    "included": false,
+    "availability": {
+      "NoGraphLoaded": false,
+      "WeightedGraphLoaded": true,
+      "UnWeightedGraphLoaded": false
+    }
+  }
+]
