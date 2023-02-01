@@ -1222,3 +1222,17 @@ Results:
 - Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
 - The viewport size should automatically be set to the size of the browser window
 - The graph should be allowed to extend past the viewport
+
+### Test 61
+
+Instructions:
+
+- Sidebar Menu: Export -› Export Data - "TO Excel"
+- Sidebar Menu: Export -> Export Image - "To Pdf"
+- Sidebar Menu: Export -> Print
+
+Results:
+
+- An excel file with the data selected should be downloaded, and exported to your device
+- A pdf file with the graph picture should be downloaded onto device.
+- A pdf of the graph selected should be able to get printed.
