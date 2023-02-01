@@ -1227,9 +1227,9 @@ Results:
 
 Instructions:
 
-- Sidebar Menu: Export -› Export Data - "TO Excel"
-- Sidebar Menu: Export -> Export Image - "To Pdf"
-- Sidebar Menu: Export -> Print
+- Sidebar Menu: Export -› Export Data - "To Excel"
+- Sidebar Menu: Export -> Export Image - "To PDF"
+- Sidebar Menu: Export -> "Print"
 
 Results:
 
