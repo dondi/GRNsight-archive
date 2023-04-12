@@ -1,6 +1,6 @@
 [
   {
-    "id": "ex1",
+    "id": "ex0",
     "title": "Dropdown Menu: Export -> Export Data",
     "text": "The data should",
     "options": {
@@ -8,7 +8,22 @@
       "To Weighted SIF": "data is exported to weighted SIF",
       "To Unweighted GraphML": "data is exported to unweighted GraphML",
       "To Weighted GraphML": "data is exported to weighted GraphML",
-      "To Excel": "data is exported to excel"
+    },
+    "included": false,
+    "availability": {
+      "NoGraphLoaded": false,
+      "WeightedGraphLoaded": true,
+      "UnWeightedGraphLoaded": false
+    }
+  },{
+    "id": "ex1",
+    "title": "Dropdown Menu: Export -> Export Data -> To Excel",
+    "text": "The data should export",
+    "options": {
+      "Select User Source": "the expression data from the original workbook",
+      "Select Database Source": "the expression data from the database",
+      "Select All Workbook Sheets": "all sheets in the workbook",
+      "Select Some Workbook Sheets": "specified sheets in the workbook",
     },
     "included": false,
     "availability": {
