@@ -1,5 +1,5 @@
 ## GRNsight Client Side Testing Overview
-Last Updated: 2023-04-11
+Last Updated: 2024-09-03
 
 | ID | Included in Testing Protocol  | GRNsight Option |  User Action | Result | 
 | ---- |  --------------- | ------ | ------- | ------ | 
@@ -31,16 +31,19 @@ Last Updated: 2023-04-11
 |f2|NO | Load Graph|Dropdown Menu: Network -> Demo -> Demo #2 | GRNsight should lay out a weighted network graph from Demo #2|
 |f2|NO | Load Graph|Dropdown Menu: Network -> Demo -> Demo #3 | GRNsight should lay out an unweighted network graph from Demo #3|
 |f2|NO | Load Graph|Dropdown Menu: Network -> Demo -> Demo #4 | GRNsight should lay out a weighted network graph from Demo #4|
+|f2|NO | Load Graph|Dropdown Menu: Network -> Demo -> Demo #5 | GRNsight should lay out a unweighted PPI graph from Demo #5|
 |f2|NO | Load Graph|Dropdown Menu: Network -> Open File | GRNsight should lay out a network graph from the Excel, SIF, or GraphML network if there are no errors in the file|
 |f2|NO | Load Graph|Dropdwon Menu: Network -> Load From Database | GRNsight should lay out a network graph from the given genes added from the specified database source|
 |f2|NO | Load Graph|Dropdown Menu: Demo -> Demo #1 | GRNsight should lay out an unweighted network graph from Demo #1|
 |f2|NO | Load Graph|Dropdown Menu: Demo -> Demo #2 | GRNsight should lay out a weighted network graph from Demo #2|
 |f2|NO | Load Graph|Dropdown Menu: Demo -> Demo #3 | GRNsight should lay out an unweighted network graph from Demo #3|
 |f2|NO | Load Graph|Dropdown Menu: Demo -> Demo #4 | GRNsight should lay out a weighted network graph from Demo #4|
+|f2|NO | Load Graph|Dropdown Menu: Demo -> Demo #5 | GRNsight should lay out a unweighted PPI graph from Demo #5|
 |f2|NO | Load Graph|Sidebar Menu: Network -> Demo -> Demo #1 | GRNsight should lay out an unweighted network graph from Demo #1|
 |f2|NO | Load Graph|Sidebar Menu: Network -> Demo -> Demo #2 | GRNsight should lay out a weighted network graph from Demo #2|
 |f2|NO | Load Graph|Sidebar Menu: Network -> Demo -> Demo #3 | GRNsight should lay out an unweighted network graph from Demo #3|
 |f2|NO | Load Graph|Sidebar Menu: Network -> Demo -> Demo #4 | GRNsight should lay out a weighted network graph from Demo #4|
+|f2|NO | Load Graph|Sidebar Menu: Network -> Demo -> Demo #5 | GRNsight should lay out a unweighted PPI graph from Demo #5|
 |f2|NO | Load Graph|Sidebar Menu: Network -> Open File | GRNsight should lay out a network graph from the Excel, SIF, or GraphML network if there are no errors in the file|
 |f2|NO | Load Graph|Sidebar Menu: Network -> Load From Database | GRNsight should lay out a network graph from the given genes added from the specified database source|
 |f3|NO | Reload Graph|Dropdown Menu: Network -> Reload | The graph should center, zoom to 100%, and reapply the force graph parameters|
@@ -157,16 +160,19 @@ Last Updated: 2023-04-11
 | Load Graph - Dropdown Menu: Network -> Demo -> Demo #2 | YES | YES | YES | 
 | Load Graph - Dropdown Menu: Network -> Demo -> Demo #3 | YES | YES | YES | 
 | Load Graph - Dropdown Menu: Network -> Demo -> Demo #4 | YES | YES | YES | 
+| Load Graph - Dropdown Menu: Network -> Demo -> Demo #5 | YES | YES | YES | 
 | Load Graph - Dropdown Menu: Network -> Open File | YES | YES | YES | 
 | Load Graph - Dropdwon Menu: Network -> Load From Database | YES | YES | YES | 
 | Load Graph - Dropdown Menu: Demo -> Demo #1 | YES | YES | YES | 
 | Load Graph - Dropdown Menu: Demo -> Demo #2 | YES | YES | YES | 
 | Load Graph - Dropdown Menu: Demo -> Demo #3 | YES | YES | YES | 
 | Load Graph - Dropdown Menu: Demo -> Demo #4 | YES | YES | YES | 
+| Load Graph - Dropdown Menu: Demo -> Demo #5 | YES | YES | YES | 
 | Load Graph - Sidebar Menu: Network -> Demo -> Demo #1 | YES | YES | YES | 
 | Load Graph - Sidebar Menu: Network -> Demo -> Demo #2 | YES | YES | YES | 
 | Load Graph - Sidebar Menu: Network -> Demo -> Demo #3 | YES | YES | YES | 
 | Load Graph - Sidebar Menu: Network -> Demo -> Demo #4 | YES | YES | YES | 
+| Load Graph - Sidebar Menu: Network -> Demo -> Demo #5 | YES | YES | YES | 
 | Load Graph - Sidebar Menu: Network -> Open File | YES | YES | YES | 
 | Load Graph - Sidebar Menu: Network -> Load From Database | YES | YES | YES | 
 | Reload Graph - Dropdown Menu: Network -> Reload | NO | YES | YES | 
