@@ -1,6 +1,6 @@
 [
     {
-        "id":"f1",
+        "id": "f1",
         "title": "Dropdown Menu: Help",
         "text": "GRNsight should",
         "options": {
@@ -16,7 +16,7 @@
         }
     },
     {
-        "id":"f2",
+        "id": "f2",
         "title": "Load Graph",
         "text": "GRNsight should",
         "options": {
@@ -25,16 +25,19 @@
             "Dropdown Menu: Network -> Demo -> Demo #2": "lay out a weighted network graph from Demo #2",
             "Dropdown Menu: Network -> Demo -> Demo #3": "lay out an unweighted network graph from Demo #3",
             "Dropdown Menu: Network -> Demo -> Demo #4": "lay out a weighted network graph from Demo #4",
+            "Dropdown Menu: Network -> Demo -> Demo #5": "lay out a unweighted PPI graph from Demo #5",
             "Dropdown Menu: Network -> Open File": "lay out a network graph from the Excel, SIF, or GraphML network if there are no errors in the file",
             "Dropdwon Menu: Network -> Load From Database": "lay out a network graph from the given genes added from the specified database source",
             "Dropdown Menu: Demo -> Demo #1": "lay out an unweighted network graph from Demo #1",
             "Dropdown Menu: Demo -> Demo #2": "lay out a weighted network graph from Demo #2",
             "Dropdown Menu: Demo -> Demo #3": "lay out an unweighted network graph from Demo #3",
             "Dropdown Menu: Demo -> Demo #4": "lay out a weighted network graph from Demo #4",
+            "Dropdown Menu: Demo -> Demo #5": "lay out a unweighted PPI graph from Demo #5",
             "Sidebar Menu: Network -> Demo -> Demo #1": "lay out an unweighted network graph from Demo #1",
             "Sidebar Menu: Network -> Demo -> Demo #2": "lay out a weighted network graph from Demo #2",
             "Sidebar Menu: Network -> Demo -> Demo #3": "lay out an unweighted network graph from Demo #3",
             "Sidebar Menu: Network -> Demo -> Demo #4": "lay out a weighted network graph from Demo #4",
+            "Sidebar Menu: Network -> Demo -> Demo #5": "lay out a unweighted PPI graph from Demo #5",
             "Sidebar Menu: Network -> Open File": "lay out a network graph from the Excel, SIF, or GraphML network if there are no errors in the file",
             "Sidebar Menu: Network -> Load From Database": "lay out a network graph from the given genes added from the specified database source"
         },
@@ -46,12 +49,12 @@
         }
     },
     {
-        "id":"f3",
+        "id": "f3",
         "title": "Reload Graph",
         "text": "The graph should",
         "options": {
-            "Dropdown Menu: Network -> Reload" : "center, zoom to 100%, and reapply the force graph parameters",
-            "Sidebar Menu: Network -> Reload" : "center, zoom to 100%, and reapply the force graph parameters"
+            "Dropdown Menu: Network -> Reload": "center, zoom to 100%, and reapply the force graph parameters",
+            "Sidebar Menu: Network -> Reload": "center, zoom to 100%, and reapply the force graph parameters"
         },
         "included": false,
         "availability": {
@@ -61,7 +64,7 @@
         }
     },
     {
-        "id":"f4",
+        "id": "f4",
         "title": "Dropdown Menu: Export -> Export Data",
         "text": "GRNsight should",
         "options": {
@@ -79,7 +82,7 @@
         }
     },
     {
-        "id":"f5",
+        "id": "f5",
         "title": "Dropdown Menu: Export -> Export Image",
         "text": "GRNsight should",
         "options": {
@@ -95,7 +98,7 @@
         }
     },
     {
-        "id":"f6",
+        "id": "f6",
         "title": "Dropdown Menu: Export -> Print",
         "text": "GRNsight should",
         "options": {
