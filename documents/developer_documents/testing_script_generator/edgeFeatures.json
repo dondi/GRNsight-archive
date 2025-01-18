@@ -11,7 +11,8 @@
         "availability": {
             "NoGraphLoaded": true,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": false
         }
     },
     {
@@ -26,7 +27,8 @@
         "availability": {
             "NoGraphLoaded": true,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": false
         }
     },
     {
@@ -42,7 +44,8 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": false
+            "UnWeightedGraphLoaded": false,
+            "PPIGraphLoaded": false
         }
     },
     {
@@ -58,7 +61,8 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": false
+            "UnWeightedGraphLoaded": false,
+            "PPIGraphLoaded": false
         }
     },
     {
@@ -72,7 +76,8 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": false
+            "UnWeightedGraphLoaded": false,
+            "PPIGraphLoaded": false
         }
     },
     {
@@ -86,7 +91,8 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": false
+            "UnWeightedGraphLoaded": false,
+            "PPIGraphLoaded": false
         }
     },
     {
@@ -100,7 +106,8 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": false
+            "UnWeightedGraphLoaded": false,
+            "PPIGraphLoaded": false
         }
     },
     {
@@ -114,7 +121,8 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": false
+            "UnWeightedGraphLoaded": false,
+            "PPIGraphLoaded": false
         }
     },
     {
@@ -128,7 +136,8 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": false
+            "UnWeightedGraphLoaded": false,
+            "PPIGraphLoaded": false
         }
     },
     {
@@ -142,7 +151,8 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": false
+            "UnWeightedGraphLoaded": false,
+            "PPIGraphLoaded": false
         }
     },
     {
@@ -157,7 +167,8 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": false
+            "UnWeightedGraphLoaded": false,
+            "PPIGraphLoaded": false
         }
     },
     {
@@ -172,7 +183,8 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": false
+            "UnWeightedGraphLoaded": false,
+            "PPIGraphLoaded": false
         }
     }
 ]

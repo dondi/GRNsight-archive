@@ -14,7 +14,8 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
         }
     },
     {
@@ -29,7 +30,8 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
         }
     },
     {
@@ -44,7 +46,8 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
         }
     }
 ]

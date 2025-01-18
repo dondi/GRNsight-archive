@@ -34,6 +34,7 @@ const JSONFileList = [
     'edgeFeatures.json', 
     'fileFeatures.json', 
     'layoutFeatures.json',
+    'networkFeatures.json',
     'nodeFeatures.json', 
     'viewFeatures.json', 
     'viewportFeatures.json'
@@ -120,7 +121,8 @@ grnsightOptions.forEach(function(test) {
     var noGraphLoadedAvailability = test.availability['NoGraphLoaded'] ? "YES": "NO";
     var weightedGraphLoadedAvailability = test.availability['WeightedGraphLoaded'] ? "YES": "NO";
     var unweightedGraphLoadedAvailability = test.availability['UnWeightedGraphLoaded'] ? "YES": "NO";
-    var availability = `| ${noGraphLoadedAvailability} | ${weightedGraphLoadedAvailability} | ${unweightedGraphLoadedAvailability} | `
+    var ppiGraphLoadedAvailability = test.availability['PPIGraphLoaded'] ? "YES": "NO";
+    var availability = `| ${noGraphLoadedAvailability} | ${weightedGraphLoadedAvailability} | ${unweightedGraphLoadedAvailability} | ${ppiGraphLoadedAvailability} |`
     optionKeys.forEach(function(option) {
         var result = test.text + " " + test.options[option];
         result = test.conditional ? result + ", " +  test.conditional : result;
@@ -149,8 +151,8 @@ var formatMarkdown = function (arrayOfNodes) {
 var formatFunctionAvailabilityTable = function() {
     var md = "\n## GRNsight Function Availability Table";
     md += "\n\n";
-    md += "| GRNsight Function | No Graph Loaded | Weighted Graph Loaded | Unweighted Graph Loaded  | \n";
-    md += "|  ---------------- | --------------- | ----------------------- | ---------------------- | \n";
+    md += "| GRNsight Function | No Graph Loaded | Weighted Graph Loaded | Unweighted Graph Loaded  | PPI Graph Loaded\n";
+    md += "|  ---------------- | --------------- | ----------------------- | ---------------------- | ------------------ |\n";
     md += availabilityDescription;
     return md;
 }

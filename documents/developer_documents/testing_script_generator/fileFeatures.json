@@ -12,7 +12,8 @@
         "availability": {
             "NoGraphLoaded": true,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
         }
     },
     {
@@ -45,7 +46,8 @@
         "availability": {
             "NoGraphLoaded": true,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
         }
     },
     {
@@ -60,29 +62,50 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
         }
     },
     {
         "id": "f4",
-        "title": "Dropdown Menu: Export -> Export Data",
+        "title": "Dropdown Menu: Export -> Export Data (Gene Regulatory Network)",
         "text": "GRNsight should",
         "options": {
             "Select \"To Unweighted SIF\"": "export an unweighted SIF file from the graph currently loaded",
             "Select \"To Weighted SIF\"": "export a weighted SIF file from the graph currently loaded",
             "Select \"To Unweighted GraphML\"": "export an unweighted GraphML file from the graph currently loaded",
             "Select \"To Weighted GraphML\"": "export a weighted GraphML file from the graph currently loaded",
-            "Select \"To Excel\"": "export an Excel file from the graph currently loaded with the chosen data"
+            "Select \"To Excel\"": "export an Excel file from the graph currently loaded with the chosen data, using pd or a numerical value as the relationship"
         },
         "included": false,
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": false
         }
     },
     {
         "id": "f5",
+        "title": "Dropdown Menu: Export -> Export Data (Protein-Protein Interaction Network)",
+        "text": "GRNsight should",
+        "options": {
+            "Select \"To Unweighted SIF\"": "export an unweighted SIF file from the graph currently loaded",
+            "Select \"To Weighted SIF\"": "not make the option available",
+            "Select \"To Unweighted GraphML\"": "not make the option available",
+            "Select \"To Weighted GraphML\"": "not make the option available",
+            "Select \"To Excel\"": "export an Excel file from the graph currently loaded with the chosen data, using pp as the relationship"
+        },
+        "included": false,
+        "availability": {
+            "NoGraphLoaded": false,
+            "WeightedGraphLoaded": true,
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
+        }
+    },
+    {
+        "id": "f6",
         "title": "Dropdown Menu: Export -> Export Image",
         "text": "GRNsight should",
         "options": {
@@ -94,11 +117,12 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
         }
     },
     {
-        "id": "f6",
+        "id": "f7",
         "title": "Dropdown Menu: Export -> Print",
         "text": "GRNsight should",
         "options": {
@@ -108,7 +132,8 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
         }
     }
 ]

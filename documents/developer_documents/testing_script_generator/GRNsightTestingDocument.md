@@ -1,5 +1,5 @@
 ## GRNsight Client Side Testing Overview
-Last Updated: 2024-09-03
+Last Updated: 2025-01-17
 
 | ID | Included in Testing Protocol  | GRNsight Option |  User Action | Result | 
 | ---- |  --------------- | ------ | ------- | ------ | 
@@ -48,15 +48,20 @@ Last Updated: 2024-09-03
 |f2|NO | Load Graph|Sidebar Menu: Network -> Load From Database | GRNsight should lay out a network graph from the given genes added from the specified database source|
 |f3|NO | Reload Graph|Dropdown Menu: Network -> Reload | The graph should center, zoom to 100%, and reapply the force graph parameters|
 |f3|NO | Reload Graph|Sidebar Menu: Network -> Reload | The graph should center, zoom to 100%, and reapply the force graph parameters|
-|f4|NO | Dropdown Menu: Export -> Export Data|Select "To Unweighted SIF" | GRNsight should export an unweighted SIF file from the graph currently loaded|
-|f4|NO | Dropdown Menu: Export -> Export Data|Select "To Weighted SIF" | GRNsight should export a weighted SIF file from the graph currently loaded|
-|f4|NO | Dropdown Menu: Export -> Export Data|Select "To Unweighted GraphML" | GRNsight should export an unweighted GraphML file from the graph currently loaded|
-|f4|NO | Dropdown Menu: Export -> Export Data|Select "To Weighted GraphML" | GRNsight should export a weighted GraphML file from the graph currently loaded|
-|f4|NO | Dropdown Menu: Export -> Export Data|Select "To Excel" | GRNsight should export an Excel file from the graph currently loaded with the chosen data|
-|f5|NO | Dropdown Menu: Export -> Export Image|Select "To PNG" | GRNsight should export a PNG image from the graph currently loaded|
-|f5|NO | Dropdown Menu: Export -> Export Image|Select "To SVG" | GRNsight should export a SVG image from the graph currently loaded|
-|f5|NO | Dropdown Menu: Export -> Export Image|Select "To PDF" | GRNsight should export a PDF file from the graph currently loaded|
-|f6|NO | Dropdown Menu: Export -> Print|Select | GRNsight should open the Print Dialogue Box|
+|f4|NO | Dropdown Menu: Export -> Export Data (Gene Regulatory Network)|Select "To Unweighted SIF" | GRNsight should export an unweighted SIF file from the graph currently loaded|
+|f4|NO | Dropdown Menu: Export -> Export Data (Gene Regulatory Network)|Select "To Weighted SIF" | GRNsight should export a weighted SIF file from the graph currently loaded|
+|f4|NO | Dropdown Menu: Export -> Export Data (Gene Regulatory Network)|Select "To Unweighted GraphML" | GRNsight should export an unweighted GraphML file from the graph currently loaded|
+|f4|NO | Dropdown Menu: Export -> Export Data (Gene Regulatory Network)|Select "To Weighted GraphML" | GRNsight should export a weighted GraphML file from the graph currently loaded|
+|f4|NO | Dropdown Menu: Export -> Export Data (Gene Regulatory Network)|Select "To Excel" | GRNsight should export an Excel file from the graph currently loaded with the chosen data, using pd or a numerical value as the relationship|
+|f5|NO | Dropdown Menu: Export -> Export Data (Protein-Protein Interaction Network)|Select "To Unweighted SIF" | GRNsight should export an unweighted SIF file from the graph currently loaded|
+|f5|NO | Dropdown Menu: Export -> Export Data (Protein-Protein Interaction Network)|Select "To Weighted SIF" | GRNsight should not make the option available|
+|f5|NO | Dropdown Menu: Export -> Export Data (Protein-Protein Interaction Network)|Select "To Unweighted GraphML" | GRNsight should not make the option available|
+|f5|NO | Dropdown Menu: Export -> Export Data (Protein-Protein Interaction Network)|Select "To Weighted GraphML" | GRNsight should not make the option available|
+|f5|NO | Dropdown Menu: Export -> Export Data (Protein-Protein Interaction Network)|Select "To Excel" | GRNsight should export an Excel file from the graph currently loaded with the chosen data, using pp as the relationship|
+|f6|NO | Dropdown Menu: Export -> Export Image|Select "To PNG" | GRNsight should export a PNG image from the graph currently loaded|
+|f6|NO | Dropdown Menu: Export -> Export Image|Select "To SVG" | GRNsight should export a SVG image from the graph currently loaded|
+|f6|NO | Dropdown Menu: Export -> Export Image|Select "To PDF" | GRNsight should export a PDF file from the graph currently loaded|
+|f7|NO | Dropdown Menu: Export -> Print|Select | GRNsight should open the Print Dialogue Box|
 |l1|YES | Sidebar Menu: Grid Layout|Keep at Default | The graph should default to force graph layout|
 |l1|YES | Sidebar Menu: Grid Layout|Click Grid Layout Button | The graph should change to grid layout|
 |l1|YES | Sidebar Menu: Grid Layout|Click Force Graph Layout Button | The graph should change to force graph layout|
@@ -78,6 +83,42 @@ Last Updated: 2024-09-03
 |l9|NO | Sidebar Menu: Lock Force Graph Parameters Checkbox|Uncheck | The Force Graph Parameter sliders should be enabled.|
 |l10|NO | Sidebar Menu: Reset Force Graph Parameters Button|Click | The Force Graph Parameter sliders should revert to the default values, if Lock Force Graph Parameters is unchecked.|
 |l11|NO | Sidebar Menu: Undo Reset Button|Click | The Force Graph Parameter sliders should return to the values they had before the Undo Reset button (or menu item) was selected, if the Undo Reset button is enabled.|
+|ne1|NO | Sidebar Menu: Network -> Network Mode (Demos)|Default when no graph is shown | The network mode for demos should be disabled.|
+|ne1|NO | Sidebar Menu: Network -> Network Mode (Demos)|Dropdown Menu: Demo -> Demo #1 | The network mode for demos should be Gene Regulatory Network.|
+|ne1|NO | Sidebar Menu: Network -> Network Mode (Demos)|Dropdown Menu: Demo -> Demo #2 | The network mode for demos should be Gene Regulatory Network.|
+|ne1|NO | Sidebar Menu: Network -> Network Mode (Demos)|Dropdown Menu: Demo -> Demo #3 | The network mode for demos should be Gene Regulatory Network.|
+|ne1|NO | Sidebar Menu: Network -> Network Mode (Demos)|Dropdown Menu: Demo -> Demo #4 | The network mode for demos should be Gene Regulatory Network.|
+|ne1|NO | Sidebar Menu: Network -> Network Mode (Demos)|Dropdown Menu: Demo -> Demo #5 | The network mode for demos should be Protein-Protein Physical Interaction Network.|
+|ne1|NO | Sidebar Menu: Network -> Network Mode (Demos)|Sidebar Menu: Network -> Demo -> Demo #1 | The network mode for demos should be Gene Regulatory Network.|
+|ne1|NO | Sidebar Menu: Network -> Network Mode (Demos)|Sidebar Menu: Network -> Demo -> Demo #2 | The network mode for demos should be Gene Regulatory Network.|
+|ne1|NO | Sidebar Menu: Network -> Network Mode (Demos)|Sidebar Menu: Network -> Demo -> Demo #3 | The network mode for demos should be Gene Regulatory Network.|
+|ne1|NO | Sidebar Menu: Network -> Network Mode (Demos)|Sidebar Menu: Network -> Demo -> Demo #4 | The network mode for demos should be Gene Regulatory Network.|
+|ne1|NO | Sidebar Menu: Network -> Network Mode (Demos)|Sidebar Menu: Network -> Demo -> Demo #5 | The network mode for demos should be Protein-Protein Physical Interaction Network.|
+|ne2|NO | Dropdown Menu: Network -> Network Mode (Demos)|Default when no graph is shown | The network mode for demos should be disabled.|
+|ne2|NO | Dropdown Menu: Network -> Network Mode (Demos)|Dropdown Menu: Demo -> Demo #1 | The network mode for demos should be Gene Regulatory Network.|
+|ne2|NO | Dropdown Menu: Network -> Network Mode (Demos)|Dropdown Menu: Demo -> Demo #2 | The network mode for demos should be Gene Regulatory Network.|
+|ne2|NO | Dropdown Menu: Network -> Network Mode (Demos)|Dropdown Menu: Demo -> Demo #3 | The network mode for demos should be Gene Regulatory Network.|
+|ne2|NO | Dropdown Menu: Network -> Network Mode (Demos)|Dropdown Menu: Demo -> Demo #4 | The network mode for demos should be Gene Regulatory Network.|
+|ne2|NO | Dropdown Menu: Network -> Network Mode (Demos)|Dropdown Menu: Demo -> Demo #5 | The network mode for demos should be Protein-Protein Physical Interaction Network.|
+|ne2|NO | Dropdown Menu: Network -> Network Mode (Demos)|Sidebar Menu: Network -> Demo -> Demo #1 | The network mode for demos should be Gene Regulatory Network.|
+|ne2|NO | Dropdown Menu: Network -> Network Mode (Demos)|Sidebar Menu: Network -> Demo -> Demo #2 | The network mode for demos should be Gene Regulatory Network.|
+|ne2|NO | Dropdown Menu: Network -> Network Mode (Demos)|Sidebar Menu: Network -> Demo -> Demo #3 | The network mode for demos should be Gene Regulatory Network.|
+|ne2|NO | Dropdown Menu: Network -> Network Mode (Demos)|Sidebar Menu: Network -> Demo -> Demo #4 | The network mode for demos should be Gene Regulatory Network.|
+|ne2|NO | Dropdown Menu: Network -> Network Mode (Demos)|Sidebar Menu: Network -> Demo -> Demo #5 | The network mode for demos should be Protein-Protein Physical Interaction Network.|
+|ne3|NO | Sidebar Menu: Network -> Network Mode (Open Files)|Default when no graph is shown | The network mode when opening files should be disabled.|
+|ne3|NO | Sidebar Menu: Network -> Network Mode (Open Files)|Dropdown Menu: Open File | The network mode when opening files should be Gene Regulatory Network if the relationship is not pp, otherwise be Protein-Protein Physical Interaction Network.|
+|ne3|NO | Sidebar Menu: Network -> Network Mode (Open Files)|Sidebar Menu: Network -> Open File | The network mode when opening files should be Gene Regulatory Network if the relationship is not pp, otherwise be Protein-Protein Physical Interaction Network.|
+|ne4|NO | Dropdown Menu: Network -> Network Mode (Open Files)|Default when no graph is shown | The network mode when opening files should be disabled.|
+|ne4|NO | Dropdown Menu: Network -> Network Mode (Open Files)|Dropdown Menu: Open File | The network mode when opening files should be Gene Regulatory Network if the relationship is not pp, otherwise be Protein-Protein Physical Interaction Network.|
+|ne4|NO | Dropdown Menu: Network -> Network Mode (Open Files)|Sidebar Menu: Network -> Open File | The network mode when opening files should be Gene Regulatory Network if the relationship is not pp, otherwise be Protein-Protein Physical Interaction Network.|
+|ne5|NO | Sidebar Menu: Network -> Network Mode (Load from Database)|Default when no graph is shown | The network mode when loading from the database should be disabled.|
+|ne5|NO | Sidebar Menu: Network -> Network Mode (Load from Database)|Sidebar Menu: Network -> Load From Database -> Network Type: Gene Regulatory | The network mode when loading from the database should be Gene Regulatory Network.|
+|ne5|NO | Sidebar Menu: Network -> Network Mode (Load from Database)|Sidebar Menu: Network -> Load From Database -> Network Type: Protein-Protein Physical Interactions | The network mode when loading from the database should be Protein-Protein Physical Interaction Network.|
+|ne6|NO | Dropdown Menu: Network -> Network Mode (Load from Database)|Default when no graph is shown | The network mode when loading from the database should be disabled.|
+|ne6|NO | Dropdown Menu: Network -> Network Mode (Load from Database)|Dropdown Menu: Load From Database -> Network Type: Gene Regulatory | The network mode when loading from the database should be Gene Regulatory Network.|
+|ne6|NO | Dropdown Menu: Network -> Network Mode (Load from Database)|Dropdown Menu: Load From Database -> Network Type: Protein-Protein Physical Interactions | The network mode when loading from the database should be Protein-Protein Physical Interaction Network.|
+|ne6|NO | Dropdown Menu: Network -> Network Mode (Load from Database)|Sidebar Menu: Network -> Load From Database -> Network Type: Gene Regulatory | The network mode when loading from the database should be Gene Regulatory Network.|
+|ne6|NO | Dropdown Menu: Network -> Network Mode (Load from Database)|Sidebar Menu: Network -> Load From Database -> Network Type: Protein-Protein Physical Interactions | The network mode when loading from the database should be Protein-Protein Physical Interaction Network.|
 |n1|NO | Sidebar Menu: Top Dataset|Keep Default Selection | The top half of each node should be colored using data from the first expression dataset detected in the input workbook, if expression data sheets are present in input workbook|
 |n1|NO | Sidebar Menu: Top Dataset|Select Top Dataset from Dropdown List | The top half of each node should be colored using data from the selected dataset, if expression data sheets are present in input workbook|
 |n2|NO | Dropdown Menu: Node -> Select Top Dataset|Keep Default Selection | The top half of each node should be colored using data from the first expression dataset detected in the input workbook, if expression data sheets are present in input workbook|
@@ -100,9 +141,47 @@ Last Updated: 2024-09-03
 |n9|NO | Sidebar Menu: Average Replicates Values (Bottom Dataset)|Uncheck | GRNsight should not average replicate values for bottom dataset, if expression data sheets are present in input workbook|
 |n10|NO | Dropdown Menu: Node -> Average Replicates Values (Bottom Dataset)|Check | GRNsight should average replicate values for bottom dataset, if expression data sheets are present in input workbook|
 |n10|NO | Dropdown Menu: Node -> Average Replicates Values (Bottom Dataset)|Uncheck | GRNsight should not average replicate values for bottom dataset, if expression data sheets are present in input workbook|
-|n11|NO | Sidebar Menu: Node Coloring Toggle Button|Click |  Node coloring should toggle between on and off, with default being on, if expression data sheets are present in input workbook|
-|n12|YES | Dropdown Menu: Node -> Enable Node Coloring|Check |  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook|
-|n12|YES | Dropdown Menu: Node -> Enable Node Coloring|Uncheck |  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook|
+|n11|NO | Sidebar Menu: Node Coloring (Demos)|Default |  Node coloring should be disabled|
+|n11|NO | Sidebar Menu: Node Coloring (Demos)|Dropdown Menu: Demo -> Demo #1 |  Node coloring should be enabled|
+|n11|NO | Sidebar Menu: Node Coloring (Demos)|Dropdown Menu: Demo -> Demo #2 |  Node coloring should be enabled|
+|n11|NO | Sidebar Menu: Node Coloring (Demos)|Dropdown Menu: Demo -> Demo #3 |  Node coloring should be enabled|
+|n11|NO | Sidebar Menu: Node Coloring (Demos)|Dropdown Menu: Demo -> Demo #4 |  Node coloring should be enabled|
+|n11|NO | Sidebar Menu: Node Coloring (Demos)|Dropdown Menu: Demo -> Demo #5 |  Node coloring should be disabled|
+|n11|NO | Sidebar Menu: Node Coloring (Demos)|Sidebar Menu: Network -> Demo -> Demo #1 |  Node coloring should be enabled|
+|n11|NO | Sidebar Menu: Node Coloring (Demos)|Sidebar Menu: Network -> Demo -> Demo #2 |  Node coloring should be enabled|
+|n11|NO | Sidebar Menu: Node Coloring (Demos)|Sidebar Menu: Network -> Demo -> Demo #3 |  Node coloring should be enabled|
+|n11|NO | Sidebar Menu: Node Coloring (Demos)|Sidebar Menu: Network -> Demo -> Demo #4 |  Node coloring should be enabled|
+|n11|NO | Sidebar Menu: Node Coloring (Demos)|Sidebar Menu: Network -> Demo -> Demo #5 |  Node coloring should be disabled|
+|n12|NO | Dropdown Menu: Node -> Node Coloring (Selecting Demos)|Default |  Node coloring should be disabled|
+|n12|NO | Dropdown Menu: Node -> Node Coloring (Selecting Demos)|Dropdown Menu: Demo -> Demo #1 |  Node coloring should be enabled|
+|n12|NO | Dropdown Menu: Node -> Node Coloring (Selecting Demos)|Dropdown Menu: Demo -> Demo #2 |  Node coloring should be enabled|
+|n12|NO | Dropdown Menu: Node -> Node Coloring (Selecting Demos)|Dropdown Menu: Demo -> Demo #3 |  Node coloring should be enabled|
+|n12|NO | Dropdown Menu: Node -> Node Coloring (Selecting Demos)|Dropdown Menu: Demo -> Demo #4 |  Node coloring should be enabled|
+|n12|NO | Dropdown Menu: Node -> Node Coloring (Selecting Demos)|Dropdown Menu: Demo -> Demo #5 |  Node coloring should be disabled|
+|n12|NO | Dropdown Menu: Node -> Node Coloring (Selecting Demos)|Sidebar Menu: Network -> Demo -> Demo #1 |  Node coloring should be enabled|
+|n12|NO | Dropdown Menu: Node -> Node Coloring (Selecting Demos)|Sidebar Menu: Network -> Demo -> Demo #2 |  Node coloring should be enabled|
+|n12|NO | Dropdown Menu: Node -> Node Coloring (Selecting Demos)|Sidebar Menu: Network -> Demo -> Demo #3 |  Node coloring should be enabled|
+|n12|NO | Dropdown Menu: Node -> Node Coloring (Selecting Demos)|Sidebar Menu: Network -> Demo -> Demo #4 |  Node coloring should be enabled|
+|n12|NO | Dropdown Menu: Node -> Node Coloring (Selecting Demos)|Sidebar Menu: Network -> Demo -> Demo #5 |  Node coloring should be disabled|
+|n13|NO | Sidebar Menu: Node Coloring (Loading From Database)|Default |  Node coloring should be disabled, when loading from database|
+|n13|NO | Sidebar Menu: Node Coloring (Loading From Database)|Dropdown Menu: Load From Database -> Network Type: Gene Regulatory |  Node coloring should be enabled, when loading from database|
+|n13|NO | Sidebar Menu: Node Coloring (Loading From Database)|Dropdown Menu: Load From Database -> Network Type: Protein-Protein Physical Interactions |  Node coloring should be disabled, when loading from database|
+|n13|NO | Sidebar Menu: Node Coloring (Loading From Database)|Sidebar Menu: Network -> Load From Database -> Network Type: Gene Regulatory |  Node coloring should be enabled, when loading from database|
+|n13|NO | Sidebar Menu: Node Coloring (Loading From Database)|Sidebar Menu: Network -> Load From Database -> Network Type: Protein-Protein Physical Interactions |  Node coloring should be disabled, when loading from database|
+|n14|NO | Dropdown Menu: Node -> Node Coloring (Loading From Database)|Default |  Node coloring should be disabled, when loading from database|
+|n14|NO | Dropdown Menu: Node -> Node Coloring (Loading From Database)|Dropdown Menu: Load From Database -> Network Type: Gene Regulatory |  Node coloring should be enabled, when loading from database|
+|n14|NO | Dropdown Menu: Node -> Node Coloring (Loading From Database)|Dropdown Menu: Load From Database -> Network Type: Protein-Protein Physical Interactions |  Node coloring should be disabled, when loading from database|
+|n14|NO | Dropdown Menu: Node -> Node Coloring (Loading From Database)|Sidebar Menu: Network -> Load From Database -> Network Type: Gene Regulatory |  Node coloring should be enabled, when loading from database|
+|n14|NO | Dropdown Menu: Node -> Node Coloring (Loading From Database)|Sidebar Menu: Network -> Load From Database -> Network Type: Protein-Protein Physical Interactions |  Node coloring should be disabled, when loading from database|
+|n15|NO | Sidebar Menu: Node Coloring (Opening File)|Default |  Node coloring should be disabled, when opening file|
+|n15|NO | Sidebar Menu: Node Coloring (Opening File)|Dropdown Menu: Open File |  Node coloring should be enabled if the relationship is not pp, otherwise be disabled, when opening file|
+|n15|NO | Sidebar Menu: Node Coloring (Opening File)|Sidebar Menu: Network -> Open File |  Node coloring should be enabled if the relationship is not pp, otherwise be disabled, when opening file|
+|n16|NO | Dropdown Menu: Node -> Node Coloring (Network Mode: Protein-Protein Physical Interactions)|Default |  Node coloring should be disabled, when network mode is Protein-Protein Physical Interactions|
+|n16|NO | Dropdown Menu: Node -> Node Coloring (Network Mode: Protein-Protein Physical Interactions)|Check |  Node coloring should be enabled with warning message, when network mode is Protein-Protein Physical Interactions|
+|n16|NO | Dropdown Menu: Node -> Node Coloring (Network Mode: Protein-Protein Physical Interactions)|Uncheck |  Node coloring should be disabled., when network mode is Protein-Protein Physical Interactions|
+|n17|NO | Sidebar Menu: Node Coloring (Network Mode: Protein-Protein Physical Interactions)|Default |  Node coloring should be enabled, when network mode is Protein-Protein Physical Interactions|
+|n17|NO | Sidebar Menu: Node Coloring (Network Mode: Protein-Protein Physical Interactions)|Check |  Node coloring should be enabled without warning message, when network mode is Protein-Protein Physical Interactions|
+|n17|NO | Sidebar Menu: Node Coloring (Network Mode: Protein-Protein Physical Interactions)|Uncheck |  Node coloring should be disabled., when network mode is Protein-Protein Physical Interactions|
 |v1|NO | Sidebar Menu: Restrict Graph to Viewport Checkbox|Check | The graph bounding box should always be contained within the viewport.|
 |v1|NO | Sidebar Menu: Restrict Graph to Viewport Checkbox|Uncheck | The graph bounding box should be allowed to extend past the viewport|
 |v2|NO | Sidebar Menu: Viewport Size|Keep as Detected |  Upon loading or reloading the GRNsight webpage, the viewport size should be automatically detected and set to small, medium, or large, based on the size of the browser window.|
@@ -130,911 +209,540 @@ Last Updated: 2024-09-03
 
 ## GRNsight Function Availability Table
 
-| GRNsight Function | No Graph Loaded | Weighted Graph Loaded | Unweighted Graph Loaded  | 
-|  ---------------- | --------------- | ----------------------- | ---------------------- | 
-| Dropdown Menu: Edge -> Enable Edge Coloring Based on Weight Value - Check | YES | YES | YES | 
-| Dropdown Menu: Edge -> Enable Edge Coloring Based on Weight Value - Uncheck | YES | YES | YES | 
-| Sidebar Menu: Enable Edge Coloring - Check | YES | YES | YES | 
-| Sidebar Menu: Enable Edge Coloring - Uncheck | YES | YES | YES | 
-| Sidebar Menu: Hide/Show Edge Weights - Select "Show With Mouse Over" | NO | YES | NO | 
-| Sidebar Menu: Hide/Show Edge Weights - Select "Always Show Edge Weights" | NO | YES | NO | 
-| Sidebar Menu: Hide/Show Edge Weights - Select "Never Show Edge Weights" | NO | YES | NO | 
-| Dropdown Menu: Edge -> Hide/Show Edge Weights - Check "Show With Mouse Over" | NO | YES | NO | 
-| Dropdown Menu: Edge -> Hide/Show Edge Weights - Check "Always Show Edge Weights" | NO | YES | NO | 
-| Dropdown Menu: Edge -> Hide/Show Edge Weights - Check "Never Show Edge Weights" | NO | YES | NO | 
-| Sidebar Menu: Edge Weight Normalization Factor - Enter a Number in the Box and Click "Set Factor" button | NO | YES | NO | 
-| Dropdown Menu: Edge -> Edge Weight Normalization Factor - Enter a Number in the Box and Press Enter | NO | YES | NO | 
-| Sidebar Menu: Reset Factor Button - Click | NO | YES | NO | 
-| Dropdown Menu: Edge -> Reset Edge Weight Normalization - Click | NO | YES | NO | 
-| Sidebar Menu: Gray Threshold Slider - Change the Grey Threshold Value | NO | YES | NO | 
-| Dropdown Menu: Edge -> Gray Threshold Input Box - Change the Grey Threshold Value and Press Enter | NO | YES | NO | 
-| Sidebar Menu: Show Grey Edges as Dashed Checkbox - Uncheck | NO | YES | NO | 
-| Sidebar Menu: Show Grey Edges as Dashed Checkbox - Check | NO | YES | NO | 
-| Dropdown Menu: Edge -> Show Grey Edges as Dashed - Uncheck | NO | YES | NO | 
-| Dropdown Menu: Edge -> Show Grey Edges as Dashed - Check | NO | YES | NO | 
-| Dropdown Menu: Help - Select "Getting Started" | YES | YES | YES | 
-| Dropdown Menu: Help - Select "GRNsight Wiki" | YES | YES | YES | 
-| Dropdown Menu: Help - Select "About GRNsight" | YES | YES | YES | 
-| Load Graph - None | YES | YES | YES | 
-| Load Graph - Dropdown Menu: Network -> Demo -> Demo #1 | YES | YES | YES | 
-| Load Graph - Dropdown Menu: Network -> Demo -> Demo #2 | YES | YES | YES | 
-| Load Graph - Dropdown Menu: Network -> Demo -> Demo #3 | YES | YES | YES | 
-| Load Graph - Dropdown Menu: Network -> Demo -> Demo #4 | YES | YES | YES | 
-| Load Graph - Dropdown Menu: Network -> Demo -> Demo #5 | YES | YES | YES | 
-| Load Graph - Dropdown Menu: Network -> Open File | YES | YES | YES | 
-| Load Graph - Dropdwon Menu: Network -> Load From Database | YES | YES | YES | 
-| Load Graph - Dropdown Menu: Demo -> Demo #1 | YES | YES | YES | 
-| Load Graph - Dropdown Menu: Demo -> Demo #2 | YES | YES | YES | 
-| Load Graph - Dropdown Menu: Demo -> Demo #3 | YES | YES | YES | 
-| Load Graph - Dropdown Menu: Demo -> Demo #4 | YES | YES | YES | 
-| Load Graph - Dropdown Menu: Demo -> Demo #5 | YES | YES | YES | 
-| Load Graph - Sidebar Menu: Network -> Demo -> Demo #1 | YES | YES | YES | 
-| Load Graph - Sidebar Menu: Network -> Demo -> Demo #2 | YES | YES | YES | 
-| Load Graph - Sidebar Menu: Network -> Demo -> Demo #3 | YES | YES | YES | 
-| Load Graph - Sidebar Menu: Network -> Demo -> Demo #4 | YES | YES | YES | 
-| Load Graph - Sidebar Menu: Network -> Demo -> Demo #5 | YES | YES | YES | 
-| Load Graph - Sidebar Menu: Network -> Open File | YES | YES | YES | 
-| Load Graph - Sidebar Menu: Network -> Load From Database | YES | YES | YES | 
-| Reload Graph - Dropdown Menu: Network -> Reload | NO | YES | YES | 
-| Reload Graph - Sidebar Menu: Network -> Reload | NO | YES | YES | 
-| Dropdown Menu: Export -> Export Data - Select "To Unweighted SIF" | NO | YES | YES | 
-| Dropdown Menu: Export -> Export Data - Select "To Weighted SIF" | NO | YES | YES | 
-| Dropdown Menu: Export -> Export Data - Select "To Unweighted GraphML" | NO | YES | YES | 
-| Dropdown Menu: Export -> Export Data - Select "To Weighted GraphML" | NO | YES | YES | 
-| Dropdown Menu: Export -> Export Data - Select "To Excel" | NO | YES | YES | 
-| Dropdown Menu: Export -> Export Image - Select "To PNG" | NO | YES | YES | 
-| Dropdown Menu: Export -> Export Image - Select "To SVG" | NO | YES | YES | 
-| Dropdown Menu: Export -> Export Image - Select "To PDF" | NO | YES | YES | 
-| Dropdown Menu: Export -> Print - Select | NO | YES | YES | 
-| Sidebar Menu: Grid Layout - Keep at Default | YES | YES | YES | 
-| Sidebar Menu: Grid Layout - Click Grid Layout Button | YES | YES | YES | 
-| Sidebar Menu: Grid Layout - Click Force Graph Layout Button | YES | YES | YES | 
-| Dropdown Menu: Layout -> Graph Options - Keep at Default | NO | YES | YES | 
-| Dropdown Menu: Layout -> Graph Options - Grid Layout | NO | YES | YES | 
-| Dropdown Menu: Layout -> Graph Options - Force Graph | NO | YES | YES | 
-| Dropdown Menu: Layout -> Lock Force Graph Parameters - Check "Lock Force Graph Parameters" | NO | YES | YES | 
-| Dropdown Menu: Layout -> Lock Force Graph Parameters - Uncheck "Lock Force Graph Parameters" | NO | YES | YES | 
-| Dropdown Menu: Layout -> Reset Force Graph Parameters - Click "Reset Force Graph Parameters" | YES | YES | YES | 
-| Dropdown Menu: Layout -> Undo Reset - Click "Undo Reset" | YES | YES | YES | 
-| Dropdown Menu: Layout -> Link Distance - Input Value, then Press Enter | YES | YES | YES | 
-| Dropdown Menu: Layout -> Charge - Input Value, then Press Enter | YES | YES | YES | 
-| Sidebar Menu: Force Graph Parameter Sliders - Keep at Default Values | YES | YES | YES | 
-| Sidebar Menu: Force Graph Parameter Sliders - Decrease Link Distance | YES | YES | YES | 
-| Sidebar Menu: Force Graph Parameter Sliders - Increase Link Distance | YES | YES | YES | 
-| Sidebar Menu: Force Graph Parameter Sliders - Increase Charge | YES | YES | YES | 
-| Sidebar Menu: Force Graph Parameter Sliders - Decrease Charge | YES | YES | YES | 
-| Sidebar Menu: Lock Force Graph Parameters Checkbox - Check | YES | YES | YES | 
-| Sidebar Menu: Lock Force Graph Parameters Checkbox - Uncheck | YES | YES | YES | 
-| Sidebar Menu: Reset Force Graph Parameters Button - Click | YES | YES | YES | 
-| Sidebar Menu: Undo Reset Button - Click | YES | YES | YES | 
-| Sidebar Menu: Top Dataset - Keep Default Selection | NO | YES | YES | 
-| Sidebar Menu: Top Dataset - Select Top Dataset from Dropdown List | NO | YES | YES | 
-| Dropdown Menu: Node -> Select Top Dataset - Keep Default Selection | NO | YES | YES | 
-| Dropdown Menu: Node -> Select Top Dataset - Check New Top Dataset from Dropdown List | NO | YES | YES | 
-| Sidebar Menu: Bottom Dataset - Keep Default Selection | NO | YES | YES | 
-| Sidebar Menu: Bottom Dataset - Select Bottom Dataset from Dropdown List | NO | YES | YES | 
-| Dropdown Menu: Node -> Select Bottom Dataset - Keep Default Selection | NO | YES | YES | 
-| Dropdown Menu: Node -> Select Bottom Dataset - Check New Bottom Dataset from Dropdown List | NO | YES | YES | 
-| Sidebar Menu: Log Fold Change Max Value - Keep Default Value | NO | YES | YES | 
-| Sidebar Menu: Log Fold Change Max Value - Increase Log Fold Change Max Value | NO | YES | YES | 
-| Sidebar Menu: Log Fold Change Max Value - Decrease Log Fold Change Max Value | NO | YES | YES | 
-| Dropdown Menu: Node -> Log Fold Change Max Value - Keep Default Value | NO | YES | YES | 
-| Dropdown Menu: Node -> Log Fold Change Max Value - Increase Log Fold Change Max Value | NO | YES | YES | 
-| Dropdown Menu: Node -> Log Fold Change Max Value - Decrease Log Fold Change Max Value | NO | YES | YES | 
-| Sidebar Menu: Average Replicates Values (Top Dataset) - Check | NO | YES | YES | 
-| Sidebar Menu: Average Replicates Values (Top Dataset) - Uncheck | NO | YES | YES | 
-| Dropdown Menu: Node -> Average Replicates Values (Top Dataset) - Check | NO | YES | YES | 
-| Dropdown Menu: Node -> Average Replicates Values (Top Dataset) - Uncheck | NO | YES | YES | 
-| Sidebar Menu: Average Replicates Values (Bottom Dataset) - Check | NO | YES | YES | 
-| Sidebar Menu: Average Replicates Values (Bottom Dataset) - Uncheck | NO | YES | YES | 
-| Dropdown Menu: Node -> Average Replicates Values (Bottom Dataset) - Check | NO | YES | YES | 
-| Dropdown Menu: Node -> Average Replicates Values (Bottom Dataset) - Uncheck | NO | YES | YES | 
-| Sidebar Menu: Node Coloring Toggle Button - Click | NO | YES | YES | 
-| Dropdown Menu: Node -> Enable Node Coloring - Check | NO | YES | YES | 
-| Dropdown Menu: Node -> Enable Node Coloring - Uncheck | NO | YES | YES | 
-| Sidebar Menu: Restrict Graph to Viewport Checkbox - Check | YES | YES | YES | 
-| Sidebar Menu: Restrict Graph to Viewport Checkbox - Uncheck | YES | YES | YES | 
-| Sidebar Menu: Viewport Size - Keep as Detected | YES | YES | YES | 
-| Sidebar Menu: Viewport Size - Select "Small" | YES | YES | YES | 
-| Sidebar Menu: Viewport Size - Select "Medium" | YES | YES | YES | 
-| Sidebar Menu: Viewport Size - Select "Large" | YES | YES | YES | 
-| Sidebar Menu: Viewport Size - Select "Fit to Window" | YES | YES | YES | 
-| Dropdown Menu: View -> Viewport Size - Keep as Detected | YES | YES | YES | 
-| Dropdown Menu: View -> Viewport Size - Check "Small" | YES | YES | YES | 
-| Dropdown Menu: View -> Viewport Size - Check "Medium" | YES | YES | YES | 
-| Dropdown Menu: View -> Viewport Size - Check "Large" | YES | YES | YES | 
-| Dropdown Menu: View -> Viewport Size - Check "Fit to Window" | YES | YES | YES | 
-| Dropdown Menu: View -> Restrict Graph to Viewport - Check | YES | YES | YES | 
-| Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck | YES | YES | YES | 
-| Dropdown Menu: View -> Zoom - Enter Zoom Value, then Press Enter | NO | YES | YES | 
-| Viewport Menu: D-Pad Control - Click Right Arrow | NO | YES | YES | 
-| Viewport Menu: D-Pad Control - Click Left Arrow | NO | YES | YES | 
-| Viewport Menu: D-Pad Control - Click Up Arrow | NO | YES | YES | 
-| Viewport Menu: D-Pad Control - Click Down Arrow | NO | YES | YES | 
-| Viewport Menu: D-Pad Control - Click Center Button | NO | YES | YES | 
-| Viewport Menu: Zoom Slider - Increase Zoom Level | NO | YES | YES | 
-| Viewport Menu: Zoom Slider - Decrease Zoom Level | NO | YES | YES | 
-| Viewport Menu: Node - No Click | NO | YES | YES | 
-| Viewport Menu: Node - Right Click | NO | YES | YES | 
+| GRNsight Function | No Graph Loaded | Weighted Graph Loaded | Unweighted Graph Loaded  | PPI Graph Loaded
+|  ---------------- | --------------- | ----------------------- | ---------------------- | ------------------ |
+| Dropdown Menu: Edge -> Enable Edge Coloring Based on Weight Value - Check | YES | YES | YES | NO |
+| Dropdown Menu: Edge -> Enable Edge Coloring Based on Weight Value - Uncheck | YES | YES | YES | NO |
+| Sidebar Menu: Enable Edge Coloring - Check | YES | YES | YES | NO |
+| Sidebar Menu: Enable Edge Coloring - Uncheck | YES | YES | YES | NO |
+| Sidebar Menu: Hide/Show Edge Weights - Select "Show With Mouse Over" | NO | YES | NO | NO |
+| Sidebar Menu: Hide/Show Edge Weights - Select "Always Show Edge Weights" | NO | YES | NO | NO |
+| Sidebar Menu: Hide/Show Edge Weights - Select "Never Show Edge Weights" | NO | YES | NO | NO |
+| Dropdown Menu: Edge -> Hide/Show Edge Weights - Check "Show With Mouse Over" | NO | YES | NO | NO |
+| Dropdown Menu: Edge -> Hide/Show Edge Weights - Check "Always Show Edge Weights" | NO | YES | NO | NO |
+| Dropdown Menu: Edge -> Hide/Show Edge Weights - Check "Never Show Edge Weights" | NO | YES | NO | NO |
+| Sidebar Menu: Edge Weight Normalization Factor - Enter a Number in the Box and Click "Set Factor" button | NO | YES | NO | NO |
+| Dropdown Menu: Edge -> Edge Weight Normalization Factor - Enter a Number in the Box and Press Enter | NO | YES | NO | NO |
+| Sidebar Menu: Reset Factor Button - Click | NO | YES | NO | NO |
+| Dropdown Menu: Edge -> Reset Edge Weight Normalization - Click | NO | YES | NO | NO |
+| Sidebar Menu: Gray Threshold Slider - Change the Grey Threshold Value | NO | YES | NO | NO |
+| Dropdown Menu: Edge -> Gray Threshold Input Box - Change the Grey Threshold Value and Press Enter | NO | YES | NO | NO |
+| Sidebar Menu: Show Grey Edges as Dashed Checkbox - Uncheck | NO | YES | NO | NO |
+| Sidebar Menu: Show Grey Edges as Dashed Checkbox - Check | NO | YES | NO | NO |
+| Dropdown Menu: Edge -> Show Grey Edges as Dashed - Uncheck | NO | YES | NO | NO |
+| Dropdown Menu: Edge -> Show Grey Edges as Dashed - Check | NO | YES | NO | NO |
+| Dropdown Menu: Help - Select "Getting Started" | YES | YES | YES | YES |
+| Dropdown Menu: Help - Select "GRNsight Wiki" | YES | YES | YES | YES |
+| Dropdown Menu: Help - Select "About GRNsight" | YES | YES | YES | YES |
+| Load Graph - None | YES | YES | YES | YES |
+| Load Graph - Dropdown Menu: Network -> Demo -> Demo #1 | YES | YES | YES | YES |
+| Load Graph - Dropdown Menu: Network -> Demo -> Demo #2 | YES | YES | YES | YES |
+| Load Graph - Dropdown Menu: Network -> Demo -> Demo #3 | YES | YES | YES | YES |
+| Load Graph - Dropdown Menu: Network -> Demo -> Demo #4 | YES | YES | YES | YES |
+| Load Graph - Dropdown Menu: Network -> Demo -> Demo #5 | YES | YES | YES | YES |
+| Load Graph - Dropdown Menu: Network -> Open File | YES | YES | YES | YES |
+| Load Graph - Dropdwon Menu: Network -> Load From Database | YES | YES | YES | YES |
+| Load Graph - Dropdown Menu: Demo -> Demo #1 | YES | YES | YES | YES |
+| Load Graph - Dropdown Menu: Demo -> Demo #2 | YES | YES | YES | YES |
+| Load Graph - Dropdown Menu: Demo -> Demo #3 | YES | YES | YES | YES |
+| Load Graph - Dropdown Menu: Demo -> Demo #4 | YES | YES | YES | YES |
+| Load Graph - Dropdown Menu: Demo -> Demo #5 | YES | YES | YES | YES |
+| Load Graph - Sidebar Menu: Network -> Demo -> Demo #1 | YES | YES | YES | YES |
+| Load Graph - Sidebar Menu: Network -> Demo -> Demo #2 | YES | YES | YES | YES |
+| Load Graph - Sidebar Menu: Network -> Demo -> Demo #3 | YES | YES | YES | YES |
+| Load Graph - Sidebar Menu: Network -> Demo -> Demo #4 | YES | YES | YES | YES |
+| Load Graph - Sidebar Menu: Network -> Demo -> Demo #5 | YES | YES | YES | YES |
+| Load Graph - Sidebar Menu: Network -> Open File | YES | YES | YES | YES |
+| Load Graph - Sidebar Menu: Network -> Load From Database | YES | YES | YES | YES |
+| Reload Graph - Dropdown Menu: Network -> Reload | NO | YES | YES | YES |
+| Reload Graph - Sidebar Menu: Network -> Reload | NO | YES | YES | YES |
+| Dropdown Menu: Export -> Export Data (Gene Regulatory Network) - Select "To Unweighted SIF" | NO | YES | YES | NO |
+| Dropdown Menu: Export -> Export Data (Gene Regulatory Network) - Select "To Weighted SIF" | NO | YES | YES | NO |
+| Dropdown Menu: Export -> Export Data (Gene Regulatory Network) - Select "To Unweighted GraphML" | NO | YES | YES | NO |
+| Dropdown Menu: Export -> Export Data (Gene Regulatory Network) - Select "To Weighted GraphML" | NO | YES | YES | NO |
+| Dropdown Menu: Export -> Export Data (Gene Regulatory Network) - Select "To Excel" | NO | YES | YES | NO |
+| Dropdown Menu: Export -> Export Data (Protein-Protein Interaction Network) - Select "To Unweighted SIF" | NO | YES | YES | YES |
+| Dropdown Menu: Export -> Export Data (Protein-Protein Interaction Network) - Select "To Weighted SIF" | NO | YES | YES | YES |
+| Dropdown Menu: Export -> Export Data (Protein-Protein Interaction Network) - Select "To Unweighted GraphML" | NO | YES | YES | YES |
+| Dropdown Menu: Export -> Export Data (Protein-Protein Interaction Network) - Select "To Weighted GraphML" | NO | YES | YES | YES |
+| Dropdown Menu: Export -> Export Data (Protein-Protein Interaction Network) - Select "To Excel" | NO | YES | YES | YES |
+| Dropdown Menu: Export -> Export Image - Select "To PNG" | NO | YES | YES | YES |
+| Dropdown Menu: Export -> Export Image - Select "To SVG" | NO | YES | YES | YES |
+| Dropdown Menu: Export -> Export Image - Select "To PDF" | NO | YES | YES | YES |
+| Dropdown Menu: Export -> Print - Select | NO | YES | YES | YES |
+| Sidebar Menu: Grid Layout - Keep at Default | YES | YES | YES | YES |
+| Sidebar Menu: Grid Layout - Click Grid Layout Button | YES | YES | YES | YES |
+| Sidebar Menu: Grid Layout - Click Force Graph Layout Button | YES | YES | YES | YES |
+| Dropdown Menu: Layout -> Graph Options - Keep at Default | NO | YES | YES | YES |
+| Dropdown Menu: Layout -> Graph Options - Grid Layout | NO | YES | YES | YES |
+| Dropdown Menu: Layout -> Graph Options - Force Graph | NO | YES | YES | YES |
+| Dropdown Menu: Layout -> Lock Force Graph Parameters - Check "Lock Force Graph Parameters" | NO | YES | YES | YES |
+| Dropdown Menu: Layout -> Lock Force Graph Parameters - Uncheck "Lock Force Graph Parameters" | NO | YES | YES | YES |
+| Dropdown Menu: Layout -> Reset Force Graph Parameters - Click "Reset Force Graph Parameters" | YES | YES | YES | YES |
+| Dropdown Menu: Layout -> Undo Reset - Click "Undo Reset" | YES | YES | YES | YES |
+| Dropdown Menu: Layout -> Link Distance - Input Value, then Press Enter | YES | YES | YES | YES |
+| Dropdown Menu: Layout -> Charge - Input Value, then Press Enter | YES | YES | YES | YES |
+| Sidebar Menu: Force Graph Parameter Sliders - Keep at Default Values | YES | YES | YES | YES |
+| Sidebar Menu: Force Graph Parameter Sliders - Decrease Link Distance | YES | YES | YES | YES |
+| Sidebar Menu: Force Graph Parameter Sliders - Increase Link Distance | YES | YES | YES | YES |
+| Sidebar Menu: Force Graph Parameter Sliders - Increase Charge | YES | YES | YES | YES |
+| Sidebar Menu: Force Graph Parameter Sliders - Decrease Charge | YES | YES | YES | YES |
+| Sidebar Menu: Lock Force Graph Parameters Checkbox - Check | YES | YES | YES | YES |
+| Sidebar Menu: Lock Force Graph Parameters Checkbox - Uncheck | YES | YES | YES | YES |
+| Sidebar Menu: Reset Force Graph Parameters Button - Click | YES | YES | YES | YES |
+| Sidebar Menu: Undo Reset Button - Click | YES | YES | YES | YES |
+| Sidebar Menu: Network -> Network Mode (Demos) - Default when no graph is shown | NO | YES | YES | YES |
+| Sidebar Menu: Network -> Network Mode (Demos) - Dropdown Menu: Demo -> Demo #1 | NO | YES | YES | YES |
+| Sidebar Menu: Network -> Network Mode (Demos) - Dropdown Menu: Demo -> Demo #2 | NO | YES | YES | YES |
+| Sidebar Menu: Network -> Network Mode (Demos) - Dropdown Menu: Demo -> Demo #3 | NO | YES | YES | YES |
+| Sidebar Menu: Network -> Network Mode (Demos) - Dropdown Menu: Demo -> Demo #4 | NO | YES | YES | YES |
+| Sidebar Menu: Network -> Network Mode (Demos) - Dropdown Menu: Demo -> Demo #5 | NO | YES | YES | YES |
+| Sidebar Menu: Network -> Network Mode (Demos) - Sidebar Menu: Network -> Demo -> Demo #1 | NO | YES | YES | YES |
+| Sidebar Menu: Network -> Network Mode (Demos) - Sidebar Menu: Network -> Demo -> Demo #2 | NO | YES | YES | YES |
+| Sidebar Menu: Network -> Network Mode (Demos) - Sidebar Menu: Network -> Demo -> Demo #3 | NO | YES | YES | YES |
+| Sidebar Menu: Network -> Network Mode (Demos) - Sidebar Menu: Network -> Demo -> Demo #4 | NO | YES | YES | YES |
+| Sidebar Menu: Network -> Network Mode (Demos) - Sidebar Menu: Network -> Demo -> Demo #5 | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Demos) - Default when no graph is shown | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Demos) - Dropdown Menu: Demo -> Demo #1 | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Demos) - Dropdown Menu: Demo -> Demo #2 | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Demos) - Dropdown Menu: Demo -> Demo #3 | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Demos) - Dropdown Menu: Demo -> Demo #4 | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Demos) - Dropdown Menu: Demo -> Demo #5 | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Demos) - Sidebar Menu: Network -> Demo -> Demo #1 | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Demos) - Sidebar Menu: Network -> Demo -> Demo #2 | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Demos) - Sidebar Menu: Network -> Demo -> Demo #3 | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Demos) - Sidebar Menu: Network -> Demo -> Demo #4 | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Demos) - Sidebar Menu: Network -> Demo -> Demo #5 | NO | YES | YES | YES |
+| Sidebar Menu: Network -> Network Mode (Open Files) - Default when no graph is shown | NO | YES | YES | YES |
+| Sidebar Menu: Network -> Network Mode (Open Files) - Dropdown Menu: Open File | NO | YES | YES | YES |
+| Sidebar Menu: Network -> Network Mode (Open Files) - Sidebar Menu: Network -> Open File | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Open Files) - Default when no graph is shown | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Open Files) - Dropdown Menu: Open File | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Open Files) - Sidebar Menu: Network -> Open File | NO | YES | YES | YES |
+| Sidebar Menu: Network -> Network Mode (Load from Database) - Default when no graph is shown | NO | YES | YES | NO |
+| Sidebar Menu: Network -> Network Mode (Load from Database) - Sidebar Menu: Network -> Load From Database -> Network Type: Gene Regulatory | NO | YES | YES | NO |
+| Sidebar Menu: Network -> Network Mode (Load from Database) - Sidebar Menu: Network -> Load From Database -> Network Type: Protein-Protein Physical Interactions | NO | YES | YES | NO |
+| Dropdown Menu: Network -> Network Mode (Load from Database) - Default when no graph is shown | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Load from Database) - Dropdown Menu: Load From Database -> Network Type: Gene Regulatory | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Load from Database) - Dropdown Menu: Load From Database -> Network Type: Protein-Protein Physical Interactions | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Load from Database) - Sidebar Menu: Network -> Load From Database -> Network Type: Gene Regulatory | NO | YES | YES | YES |
+| Dropdown Menu: Network -> Network Mode (Load from Database) - Sidebar Menu: Network -> Load From Database -> Network Type: Protein-Protein Physical Interactions | NO | YES | YES | YES |
+| Sidebar Menu: Top Dataset - Keep Default Selection | NO | YES | YES | YES |
+| Sidebar Menu: Top Dataset - Select Top Dataset from Dropdown List | NO | YES | YES | YES |
+| Dropdown Menu: Node -> Select Top Dataset - Keep Default Selection | NO | YES | YES | YES |
+| Dropdown Menu: Node -> Select Top Dataset - Check New Top Dataset from Dropdown List | NO | YES | YES | YES |
+| Sidebar Menu: Bottom Dataset - Keep Default Selection | NO | YES | YES | YES |
+| Sidebar Menu: Bottom Dataset - Select Bottom Dataset from Dropdown List | NO | YES | YES | YES |
+| Dropdown Menu: Node -> Select Bottom Dataset - Keep Default Selection | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Select Bottom Dataset - Check New Bottom Dataset from Dropdown List | NO | YES | YES | NO |
+| Sidebar Menu: Log Fold Change Max Value - Keep Default Value | NO | YES | YES | YES |
+| Sidebar Menu: Log Fold Change Max Value - Increase Log Fold Change Max Value | NO | YES | YES | YES |
+| Sidebar Menu: Log Fold Change Max Value - Decrease Log Fold Change Max Value | NO | YES | YES | YES |
+| Dropdown Menu: Node -> Log Fold Change Max Value - Keep Default Value | NO | YES | YES | YES |
+| Dropdown Menu: Node -> Log Fold Change Max Value - Increase Log Fold Change Max Value | NO | YES | YES | YES |
+| Dropdown Menu: Node -> Log Fold Change Max Value - Decrease Log Fold Change Max Value | NO | YES | YES | YES |
+| Sidebar Menu: Average Replicates Values (Top Dataset) - Check | NO | YES | YES | YES |
+| Sidebar Menu: Average Replicates Values (Top Dataset) - Uncheck | NO | YES | YES | YES |
+| Dropdown Menu: Node -> Average Replicates Values (Top Dataset) - Check | NO | YES | YES | YES |
+| Dropdown Menu: Node -> Average Replicates Values (Top Dataset) - Uncheck | NO | YES | YES | YES |
+| Sidebar Menu: Average Replicates Values (Bottom Dataset) - Check | NO | YES | YES | NO |
+| Sidebar Menu: Average Replicates Values (Bottom Dataset) - Uncheck | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Average Replicates Values (Bottom Dataset) - Check | NO | YES | YES | YES |
+| Dropdown Menu: Node -> Average Replicates Values (Bottom Dataset) - Uncheck | NO | YES | YES | YES |
+| Sidebar Menu: Node Coloring (Demos) - Default | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Demos) - Dropdown Menu: Demo -> Demo #1 | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Demos) - Dropdown Menu: Demo -> Demo #2 | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Demos) - Dropdown Menu: Demo -> Demo #3 | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Demos) - Dropdown Menu: Demo -> Demo #4 | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Demos) - Dropdown Menu: Demo -> Demo #5 | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Demos) - Sidebar Menu: Network -> Demo -> Demo #1 | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Demos) - Sidebar Menu: Network -> Demo -> Demo #2 | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Demos) - Sidebar Menu: Network -> Demo -> Demo #3 | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Demos) - Sidebar Menu: Network -> Demo -> Demo #4 | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Demos) - Sidebar Menu: Network -> Demo -> Demo #5 | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Node Coloring (Selecting Demos) - Default | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Node Coloring (Selecting Demos) - Dropdown Menu: Demo -> Demo #1 | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Node Coloring (Selecting Demos) - Dropdown Menu: Demo -> Demo #2 | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Node Coloring (Selecting Demos) - Dropdown Menu: Demo -> Demo #3 | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Node Coloring (Selecting Demos) - Dropdown Menu: Demo -> Demo #4 | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Node Coloring (Selecting Demos) - Dropdown Menu: Demo -> Demo #5 | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Node Coloring (Selecting Demos) - Sidebar Menu: Network -> Demo -> Demo #1 | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Node Coloring (Selecting Demos) - Sidebar Menu: Network -> Demo -> Demo #2 | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Node Coloring (Selecting Demos) - Sidebar Menu: Network -> Demo -> Demo #3 | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Node Coloring (Selecting Demos) - Sidebar Menu: Network -> Demo -> Demo #4 | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Node Coloring (Selecting Demos) - Sidebar Menu: Network -> Demo -> Demo #5 | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Loading From Database) - Default | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Loading From Database) - Dropdown Menu: Load From Database -> Network Type: Gene Regulatory | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Loading From Database) - Dropdown Menu: Load From Database -> Network Type: Protein-Protein Physical Interactions | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Loading From Database) - Sidebar Menu: Network -> Load From Database -> Network Type: Gene Regulatory | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Loading From Database) - Sidebar Menu: Network -> Load From Database -> Network Type: Protein-Protein Physical Interactions | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Node Coloring (Loading From Database) - Default | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Node Coloring (Loading From Database) - Dropdown Menu: Load From Database -> Network Type: Gene Regulatory | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Node Coloring (Loading From Database) - Dropdown Menu: Load From Database -> Network Type: Protein-Protein Physical Interactions | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Node Coloring (Loading From Database) - Sidebar Menu: Network -> Load From Database -> Network Type: Gene Regulatory | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Node Coloring (Loading From Database) - Sidebar Menu: Network -> Load From Database -> Network Type: Protein-Protein Physical Interactions | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Opening File) - Default | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Opening File) - Dropdown Menu: Open File | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Opening File) - Sidebar Menu: Network -> Open File | NO | YES | YES | NO |
+| Dropdown Menu: Node -> Node Coloring (Network Mode: Protein-Protein Physical Interactions) - Default | NO | YES | YES | YES |
+| Dropdown Menu: Node -> Node Coloring (Network Mode: Protein-Protein Physical Interactions) - Check | NO | YES | YES | YES |
+| Dropdown Menu: Node -> Node Coloring (Network Mode: Protein-Protein Physical Interactions) - Uncheck | NO | YES | YES | YES |
+| Sidebar Menu: Node Coloring (Network Mode: Protein-Protein Physical Interactions) - Default | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Network Mode: Protein-Protein Physical Interactions) - Check | NO | YES | YES | NO |
+| Sidebar Menu: Node Coloring (Network Mode: Protein-Protein Physical Interactions) - Uncheck | NO | YES | YES | NO |
+| Sidebar Menu: Restrict Graph to Viewport Checkbox - Check | YES | YES | YES | YES |
+| Sidebar Menu: Restrict Graph to Viewport Checkbox - Uncheck | YES | YES | YES | YES |
+| Sidebar Menu: Viewport Size - Keep as Detected | YES | YES | YES | YES |
+| Sidebar Menu: Viewport Size - Select "Small" | YES | YES | YES | YES |
+| Sidebar Menu: Viewport Size - Select "Medium" | YES | YES | YES | YES |
+| Sidebar Menu: Viewport Size - Select "Large" | YES | YES | YES | YES |
+| Sidebar Menu: Viewport Size - Select "Fit to Window" | YES | YES | YES | YES |
+| Dropdown Menu: View -> Viewport Size - Keep as Detected | YES | YES | YES | YES |
+| Dropdown Menu: View -> Viewport Size - Check "Small" | YES | YES | YES | YES |
+| Dropdown Menu: View -> Viewport Size - Check "Medium" | YES | YES | YES | YES |
+| Dropdown Menu: View -> Viewport Size - Check "Large" | YES | YES | YES | YES |
+| Dropdown Menu: View -> Viewport Size - Check "Fit to Window" | YES | YES | YES | YES |
+| Dropdown Menu: View -> Restrict Graph to Viewport - Check | YES | YES | YES | YES |
+| Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck | YES | YES | YES | YES |
+| Dropdown Menu: View -> Zoom - Enter Zoom Value, then Press Enter | NO | YES | YES | YES |
+| Viewport Menu: D-Pad Control - Click Right Arrow | NO | YES | YES | YES |
+| Viewport Menu: D-Pad Control - Click Left Arrow | NO | YES | YES | YES |
+| Viewport Menu: D-Pad Control - Click Up Arrow | NO | YES | YES | YES |
+| Viewport Menu: D-Pad Control - Click Down Arrow | NO | YES | YES | YES |
+| Viewport Menu: D-Pad Control - Click Center Button | NO | YES | YES | YES |
+| Viewport Menu: Zoom Slider - Increase Zoom Level | NO | YES | YES | YES |
+| Viewport Menu: Zoom Slider - Decrease Zoom Level | NO | YES | YES | YES |
+| Viewport Menu: Node - No Click | NO | YES | YES | YES |
+| Viewport Menu: Node - Right Click | NO | YES | YES | YES |
 
 ## Client Side Tests
 ### Test 1
 Instructions:
 - Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Check
 - Dropdown Menu: View -> Viewport Size - Keep as Detected
 - Dropdown Menu: View -> Restrict Graph to Viewport - Check
 
 Results:
 - The graph should default to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
 -  Upon loading or reloading the GRNsight webpage, the viewport size should be automatically detected and set to small, medium, or large, based on the size of the browser window.
 - The graph should always be contained within the viewport.
 
 ### Test 2
 Instructions:
 - Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
 - Dropdown Menu: View -> Viewport Size - Keep as Detected
 - Dropdown Menu: View -> Restrict Graph to Viewport - Check
 
 Results:
 - The graph should change to grid layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
 -  Upon loading or reloading the GRNsight webpage, the viewport size should be automatically detected and set to small, medium, or large, based on the size of the browser window.
 - The graph should always be contained within the viewport.
 
 ### Test 3
 Instructions:
 - Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
 - Dropdown Menu: View -> Viewport Size - Keep as Detected
 - Dropdown Menu: View -> Restrict Graph to Viewport - Check
 
 Results:
 - The graph should change to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
 -  Upon loading or reloading the GRNsight webpage, the viewport size should be automatically detected and set to small, medium, or large, based on the size of the browser window.
 - The graph should always be contained within the viewport.
 
 ### Test 4
 Instructions:
 - Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Keep as Detected
+- Dropdown Menu: View -> Viewport Size - Check "Small"
 - Dropdown Menu: View -> Restrict Graph to Viewport - Check
 
 Results:
 - The graph should default to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  Upon loading or reloading the GRNsight webpage, the viewport size should be automatically detected and set to small, medium, or large, based on the size of the browser window.
+-  The viewport size should be set to small
 - The graph should always be contained within the viewport.
 
 ### Test 5
 Instructions:
 - Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Keep as Detected
+- Dropdown Menu: View -> Viewport Size - Check "Small"
 - Dropdown Menu: View -> Restrict Graph to Viewport - Check
 
 Results:
 - The graph should change to grid layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  Upon loading or reloading the GRNsight webpage, the viewport size should be automatically detected and set to small, medium, or large, based on the size of the browser window.
+-  The viewport size should be set to small
 - The graph should always be contained within the viewport.
 
 ### Test 6
 Instructions:
 - Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Keep as Detected
+- Dropdown Menu: View -> Viewport Size - Check "Small"
 - Dropdown Menu: View -> Restrict Graph to Viewport - Check
 
 Results:
 - The graph should change to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  Upon loading or reloading the GRNsight webpage, the viewport size should be automatically detected and set to small, medium, or large, based on the size of the browser window.
+-  The viewport size should be set to small
 - The graph should always be contained within the viewport.
 
 ### Test 7
 Instructions:
 - Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Small"
+- Dropdown Menu: View -> Viewport Size - Check "Medium"
 - Dropdown Menu: View -> Restrict Graph to Viewport - Check
 
 Results:
 - The graph should default to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to small
+-  The viewport size should be set to medium
 - The graph should always be contained within the viewport.
 
 ### Test 8
 Instructions:
 - Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Small"
+- Dropdown Menu: View -> Viewport Size - Check "Medium"
 - Dropdown Menu: View -> Restrict Graph to Viewport - Check
 
 Results:
 - The graph should change to grid layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to small
+-  The viewport size should be set to medium
 - The graph should always be contained within the viewport.
 
 ### Test 9
 Instructions:
 - Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Small"
+- Dropdown Menu: View -> Viewport Size - Check "Medium"
 - Dropdown Menu: View -> Restrict Graph to Viewport - Check
 
 Results:
 - The graph should change to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to small
+-  The viewport size should be set to medium
 - The graph should always be contained within the viewport.
 
 ### Test 10
 Instructions:
 - Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Small"
+- Dropdown Menu: View -> Viewport Size - Check "Large"
 - Dropdown Menu: View -> Restrict Graph to Viewport - Check
 
 Results:
 - The graph should default to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to small
+-  The viewport size should be set to large
 - The graph should always be contained within the viewport.
 
 ### Test 11
 Instructions:
 - Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Small"
+- Dropdown Menu: View -> Viewport Size - Check "Large"
 - Dropdown Menu: View -> Restrict Graph to Viewport - Check
 
 Results:
 - The graph should change to grid layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to small
+-  The viewport size should be set to large
 - The graph should always be contained within the viewport.
 
 ### Test 12
 Instructions:
 - Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Small"
+- Dropdown Menu: View -> Viewport Size - Check "Large"
 - Dropdown Menu: View -> Restrict Graph to Viewport - Check
 
 Results:
 - The graph should change to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to small
+-  The viewport size should be set to large
 - The graph should always be contained within the viewport.
 
 ### Test 13
 Instructions:
 - Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Medium"
+- Dropdown Menu: View -> Viewport Size - Check "Fit to Window"
 - Dropdown Menu: View -> Restrict Graph to Viewport - Check
 
 Results:
 - The graph should default to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to medium
+-  The viewport size should automatically be set to the size of the browser window
 - The graph should always be contained within the viewport.
 
 ### Test 14
 Instructions:
 - Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Medium"
+- Dropdown Menu: View -> Viewport Size - Check "Fit to Window"
 - Dropdown Menu: View -> Restrict Graph to Viewport - Check
 
 Results:
 - The graph should change to grid layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to medium
+-  The viewport size should automatically be set to the size of the browser window
 - The graph should always be contained within the viewport.
 
 ### Test 15
 Instructions:
 - Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Medium"
+- Dropdown Menu: View -> Viewport Size - Check "Fit to Window"
 - Dropdown Menu: View -> Restrict Graph to Viewport - Check
 
 Results:
 - The graph should change to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to medium
+-  The viewport size should automatically be set to the size of the browser window
 - The graph should always be contained within the viewport.
 
 ### Test 16
 Instructions:
 - Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Medium"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Check
+- Dropdown Menu: View -> Viewport Size - Keep as Detected
+- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
 
 Results:
 - The graph should default to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to medium
-- The graph should always be contained within the viewport.
+-  Upon loading or reloading the GRNsight webpage, the viewport size should be automatically detected and set to small, medium, or large, based on the size of the browser window.
+- The graph should be allowed to extend past the viewport
 
 ### Test 17
 Instructions:
 - Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Medium"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Check
+- Dropdown Menu: View -> Viewport Size - Keep as Detected
+- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
 
 Results:
 - The graph should change to grid layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to medium
-- The graph should always be contained within the viewport.
+-  Upon loading or reloading the GRNsight webpage, the viewport size should be automatically detected and set to small, medium, or large, based on the size of the browser window.
+- The graph should be allowed to extend past the viewport
 
 ### Test 18
 Instructions:
 - Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Medium"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Check
+- Dropdown Menu: View -> Viewport Size - Keep as Detected
+- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
 
 Results:
 - The graph should change to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to medium
-- The graph should always be contained within the viewport.
+-  Upon loading or reloading the GRNsight webpage, the viewport size should be automatically detected and set to small, medium, or large, based on the size of the browser window.
+- The graph should be allowed to extend past the viewport
 
 ### Test 19
 Instructions:
 - Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Large"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Check
+- Dropdown Menu: View -> Viewport Size - Check "Small"
+- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
 
 Results:
 - The graph should default to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to large
-- The graph should always be contained within the viewport.
+-  The viewport size should be set to small
+- The graph should be allowed to extend past the viewport
 
 ### Test 20
 Instructions:
 - Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Large"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Check
+- Dropdown Menu: View -> Viewport Size - Check "Small"
+- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
 
 Results:
 - The graph should change to grid layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to large
-- The graph should always be contained within the viewport.
+-  The viewport size should be set to small
+- The graph should be allowed to extend past the viewport
 
 ### Test 21
 Instructions:
 - Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Large"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Check
+- Dropdown Menu: View -> Viewport Size - Check "Small"
+- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
 
 Results:
 - The graph should change to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to large
-- The graph should always be contained within the viewport.
+-  The viewport size should be set to small
+- The graph should be allowed to extend past the viewport
 
 ### Test 22
 Instructions:
 - Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Large"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Check
+- Dropdown Menu: View -> Viewport Size - Check "Medium"
+- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
 
 Results:
 - The graph should default to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to large
-- The graph should always be contained within the viewport.
+-  The viewport size should be set to medium
+- The graph should be allowed to extend past the viewport
 
 ### Test 23
 Instructions:
 - Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Large"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Check
+- Dropdown Menu: View -> Viewport Size - Check "Medium"
+- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
 
 Results:
 - The graph should change to grid layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to large
-- The graph should always be contained within the viewport.
+-  The viewport size should be set to medium
+- The graph should be allowed to extend past the viewport
 
 ### Test 24
 Instructions:
 - Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Large"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Check
+- Dropdown Menu: View -> Viewport Size - Check "Medium"
+- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
 
 Results:
 - The graph should change to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to large
-- The graph should always be contained within the viewport.
+-  The viewport size should be set to medium
+- The graph should be allowed to extend past the viewport
 
 ### Test 25
 Instructions:
 - Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Fit to Window"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Check
+- Dropdown Menu: View -> Viewport Size - Check "Large"
+- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
 
 Results:
 - The graph should default to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should automatically be set to the size of the browser window
-- The graph should always be contained within the viewport.
+-  The viewport size should be set to large
+- The graph should be allowed to extend past the viewport
 
 ### Test 26
 Instructions:
 - Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Fit to Window"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Check
+- Dropdown Menu: View -> Viewport Size - Check "Large"
+- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
 
 Results:
 - The graph should change to grid layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should automatically be set to the size of the browser window
-- The graph should always be contained within the viewport.
+-  The viewport size should be set to large
+- The graph should be allowed to extend past the viewport
 
 ### Test 27
 Instructions:
 - Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Fit to Window"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Check
+- Dropdown Menu: View -> Viewport Size - Check "Large"
+- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
 
 Results:
 - The graph should change to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should automatically be set to the size of the browser window
-- The graph should always be contained within the viewport.
+-  The viewport size should be set to large
+- The graph should be allowed to extend past the viewport
 
 ### Test 28
 Instructions:
 - Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
 - Dropdown Menu: View -> Viewport Size - Check "Fit to Window"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Check
+- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
 
 Results:
 - The graph should default to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
 -  The viewport size should automatically be set to the size of the browser window
-- The graph should always be contained within the viewport.
+- The graph should be allowed to extend past the viewport
 
 ### Test 29
 Instructions:
 - Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
 - Dropdown Menu: View -> Viewport Size - Check "Fit to Window"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Check
+- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
 
 Results:
 - The graph should change to grid layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
 -  The viewport size should automatically be set to the size of the browser window
-- The graph should always be contained within the viewport.
+- The graph should be allowed to extend past the viewport
 
 ### Test 30
 Instructions:
 - Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Fit to Window"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Check
-
-Results:
-- The graph should change to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should automatically be set to the size of the browser window
-- The graph should always be contained within the viewport.
-
-### Test 31
-Instructions:
-- Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Keep as Detected
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should default to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  Upon loading or reloading the GRNsight webpage, the viewport size should be automatically detected and set to small, medium, or large, based on the size of the browser window.
-- The graph should be allowed to extend past the viewport
-
-### Test 32
-Instructions:
-- Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Keep as Detected
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to grid layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  Upon loading or reloading the GRNsight webpage, the viewport size should be automatically detected and set to small, medium, or large, based on the size of the browser window.
-- The graph should be allowed to extend past the viewport
-
-### Test 33
-Instructions:
-- Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Keep as Detected
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  Upon loading or reloading the GRNsight webpage, the viewport size should be automatically detected and set to small, medium, or large, based on the size of the browser window.
-- The graph should be allowed to extend past the viewport
-
-### Test 34
-Instructions:
-- Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Keep as Detected
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should default to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  Upon loading or reloading the GRNsight webpage, the viewport size should be automatically detected and set to small, medium, or large, based on the size of the browser window.
-- The graph should be allowed to extend past the viewport
-
-### Test 35
-Instructions:
-- Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Keep as Detected
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to grid layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  Upon loading or reloading the GRNsight webpage, the viewport size should be automatically detected and set to small, medium, or large, based on the size of the browser window.
-- The graph should be allowed to extend past the viewport
-
-### Test 36
-Instructions:
-- Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Keep as Detected
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  Upon loading or reloading the GRNsight webpage, the viewport size should be automatically detected and set to small, medium, or large, based on the size of the browser window.
-- The graph should be allowed to extend past the viewport
-
-### Test 37
-Instructions:
-- Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Small"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should default to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to small
-- The graph should be allowed to extend past the viewport
-
-### Test 38
-Instructions:
-- Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Small"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to grid layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to small
-- The graph should be allowed to extend past the viewport
-
-### Test 39
-Instructions:
-- Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Small"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to small
-- The graph should be allowed to extend past the viewport
-
-### Test 40
-Instructions:
-- Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Small"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should default to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to small
-- The graph should be allowed to extend past the viewport
-
-### Test 41
-Instructions:
-- Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Small"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to grid layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to small
-- The graph should be allowed to extend past the viewport
-
-### Test 42
-Instructions:
-- Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Small"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to small
-- The graph should be allowed to extend past the viewport
-
-### Test 43
-Instructions:
-- Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Medium"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should default to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to medium
-- The graph should be allowed to extend past the viewport
-
-### Test 44
-Instructions:
-- Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Medium"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to grid layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to medium
-- The graph should be allowed to extend past the viewport
-
-### Test 45
-Instructions:
-- Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Medium"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to medium
-- The graph should be allowed to extend past the viewport
-
-### Test 46
-Instructions:
-- Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Medium"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should default to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to medium
-- The graph should be allowed to extend past the viewport
-
-### Test 47
-Instructions:
-- Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Medium"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to grid layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to medium
-- The graph should be allowed to extend past the viewport
-
-### Test 48
-Instructions:
-- Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Medium"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to medium
-- The graph should be allowed to extend past the viewport
-
-### Test 49
-Instructions:
-- Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Large"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should default to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to large
-- The graph should be allowed to extend past the viewport
-
-### Test 50
-Instructions:
-- Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Large"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to grid layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to large
-- The graph should be allowed to extend past the viewport
-
-### Test 51
-Instructions:
-- Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Large"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should be set to large
-- The graph should be allowed to extend past the viewport
-
-### Test 52
-Instructions:
-- Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Large"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should default to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to large
-- The graph should be allowed to extend past the viewport
-
-### Test 53
-Instructions:
-- Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Large"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to grid layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to large
-- The graph should be allowed to extend past the viewport
-
-### Test 54
-Instructions:
-- Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Large"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should be set to large
-- The graph should be allowed to extend past the viewport
-
-### Test 55
-Instructions:
-- Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Fit to Window"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should default to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should automatically be set to the size of the browser window
-- The graph should be allowed to extend past the viewport
-
-### Test 56
-Instructions:
-- Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
-- Dropdown Menu: View -> Viewport Size - Check "Fit to Window"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to grid layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should automatically be set to the size of the browser window
-- The graph should be allowed to extend past the viewport
-
-### Test 57
-Instructions:
-- Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Check
 - Dropdown Menu: View -> Viewport Size - Check "Fit to Window"
 - Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
 
 Results:
 - The graph should change to force graph layout
--  Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on, if expression data sheets are present in input workbook
--  The viewport size should automatically be set to the size of the browser window
-- The graph should be allowed to extend past the viewport
-
-### Test 58
-Instructions:
-- Sidebar Menu: Grid Layout - Keep at Default
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Fit to Window"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should default to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should automatically be set to the size of the browser window
-- The graph should be allowed to extend past the viewport
-
-### Test 59
-Instructions:
-- Sidebar Menu: Grid Layout - Click Grid Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Fit to Window"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to grid layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
--  The viewport size should automatically be set to the size of the browser window
-- The graph should be allowed to extend past the viewport
-
-### Test 60
-Instructions:
-- Sidebar Menu: Grid Layout - Click Force Graph Layout Button
-- Dropdown Menu: Node -> Enable Node Coloring - Uncheck
-- Dropdown Menu: View -> Viewport Size - Check "Fit to Window"
-- Dropdown Menu: View -> Restrict Graph to Viewport - Uncheck
-
-Results:
-- The graph should change to force graph layout
--  Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off, if expression data sheets are present in input workbook
 -  The viewport size should automatically be set to the size of the browser window
 - The graph should be allowed to extend past the viewport
 

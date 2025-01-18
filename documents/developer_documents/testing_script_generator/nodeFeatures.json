@@ -1,6 +1,6 @@
 [
     {
-        "id":"n1",
+        "id": "n1",
         "title": "Sidebar Menu: Top Dataset",
         "text": "The top half of each node should be colored using data from",
         "options": {
@@ -12,11 +12,12 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
         }
     },
     {
-        "id":"n2",
+        "id": "n2",
         "title": "Dropdown Menu: Node -> Select Top Dataset",
         "text": "The top half of each node should be colored using data from",
         "options": {
@@ -28,11 +29,12 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
         }
     },
     {
-        "id":"n3",
+        "id": "n3",
         "title": "Sidebar Menu: Bottom Dataset",
         "text": "The bottom half of each node should be colored using data from",
         "options": {
@@ -44,11 +46,12 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
         }
     },
     {
-        "id":"n4",
+        "id": "n4",
         "title": "Dropdown Menu: Node -> Select Bottom Dataset",
         "text": "The bottom half of each node should be colored using data from",
         "options": {
@@ -64,7 +67,7 @@
         }
     },
     {
-        "id":"n5",
+        "id": "n5",
         "title": "Sidebar Menu: Log Fold Change Max Value",
         "text": "The node coloring visualization's color intensity should",
         "options": {
@@ -77,11 +80,12 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
         }
     },
     {
-        "id":"n6",
+        "id": "n6",
         "title": "Dropdown Menu: Node -> Log Fold Change Max Value",
         "text": "The node coloring visualization's color intensity should",
         "options": {
@@ -94,11 +98,12 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
         }
     },
     {
-        "id":"n7",
+        "id": "n7",
         "title": "Sidebar Menu: Average Replicates Values (Top Dataset)",
         "text": "GRNsight should",
         "options": {
@@ -110,11 +115,12 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
         }
     },
     {
-        "id":"n8",
+        "id": "n8",
         "title": "Dropdown Menu: Node -> Average Replicates Values (Top Dataset)",
         "text": "GRNsight should",
         "options": {
@@ -126,11 +132,12 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
         }
     },
     {
-        "id":"n9",
+        "id": "n9",
         "title": "Sidebar Menu: Average Replicates Values (Bottom Dataset)",
         "text": "GRNsight should",
         "options": {
@@ -146,7 +153,7 @@
         }
     },
     {
-        "id":"n10",
+        "id": "n10",
         "title": "Dropdown Menu: Node -> Average Replicates Values (Bottom Dataset)",
         "text": "GRNsight should",
         "options": {
@@ -158,38 +165,152 @@
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
         }
     },
     {
-        "id":"n11",
-        "title": "Sidebar Menu: Node Coloring Toggle Button",
+        "id": "n11",
+        "title": "Sidebar Menu: Node Coloring (Demos)",
         "text": "",
         "options": {
-            "Click": "Node coloring should toggle between on and off, with default being on"
+            "Default": "Node coloring should be disabled",
+            "Dropdown Menu: Demo -> Demo #1": "Node coloring should be enabled",
+            "Dropdown Menu: Demo -> Demo #2": "Node coloring should be enabled",
+            "Dropdown Menu: Demo -> Demo #3": "Node coloring should be enabled",
+            "Dropdown Menu: Demo -> Demo #4": "Node coloring should be enabled",
+            "Dropdown Menu: Demo -> Demo #5": "Node coloring should be disabled",
+            "Sidebar Menu: Network -> Demo -> Demo #1": "Node coloring should be enabled",
+            "Sidebar Menu: Network -> Demo -> Demo #2": "Node coloring should be enabled",
+            "Sidebar Menu: Network -> Demo -> Demo #3": "Node coloring should be enabled",
+            "Sidebar Menu: Network -> Demo -> Demo #4": "Node coloring should be enabled",
+            "Sidebar Menu: Network -> Demo -> Demo #5": "Node coloring should be disabled"
         },
         "included": false,
-        "conditional": "if expression data sheets are present in input workbook",
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": false
         }
     },
     {
-        "id":"n12",
-        "title": "Dropdown Menu: Node -> Enable Node Coloring",
+        "id": "n12",
+        "title": "Dropdown Menu: Node -> Node Coloring (Selecting Demos)",
         "text": "",
         "options": {
-            "Check": "Node coloring should become enabled, and Node Coloring Toggle Button text in sidebar menu should toggle on",
-            "Uncheck": "Node coloring should become disabled, and Node Coloring Toggle Button text in sidebar menu should toggle off"
+            "Default": "Node coloring should be disabled",
+            "Dropdown Menu: Demo -> Demo #1": "Node coloring should be enabled",
+            "Dropdown Menu: Demo -> Demo #2": "Node coloring should be enabled",
+            "Dropdown Menu: Demo -> Demo #3": "Node coloring should be enabled",
+            "Dropdown Menu: Demo -> Demo #4": "Node coloring should be enabled",
+            "Dropdown Menu: Demo -> Demo #5": "Node coloring should be disabled",
+            "Sidebar Menu: Network -> Demo -> Demo #1": "Node coloring should be enabled",
+            "Sidebar Menu: Network -> Demo -> Demo #2": "Node coloring should be enabled",
+            "Sidebar Menu: Network -> Demo -> Demo #3": "Node coloring should be enabled",
+            "Sidebar Menu: Network -> Demo -> Demo #4": "Node coloring should be enabled",
+            "Sidebar Menu: Network -> Demo -> Demo #5": "Node coloring should be disabled"
         },
-        "included": true,
-        "conditional": "if expression data sheets are present in input workbook",
+        "included": false,
         "availability": {
             "NoGraphLoaded": false,
             "WeightedGraphLoaded": true,
-            "UnWeightedGraphLoaded": true
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": false
+        }
+    },
+    {
+        "id": "n13",
+        "title": "Sidebar Menu: Node Coloring (Loading From Database)",
+        "text": "",
+        "options": {
+            "Default": "Node coloring should be disabled",
+            "Dropdown Menu: Load From Database -> Network Type: Gene Regulatory": "Node coloring should be enabled",
+            "Dropdown Menu: Load From Database -> Network Type: Protein-Protein Physical Interactions": "Node coloring should be disabled",
+            "Sidebar Menu: Network -> Load From Database -> Network Type: Gene Regulatory": "Node coloring should be enabled",
+            "Sidebar Menu: Network -> Load From Database -> Network Type: Protein-Protein Physical Interactions": "Node coloring should be disabled"
+        },
+        "included": false,
+        "conditional": "when loading from database",
+        "availability": {
+            "NoGraphLoaded": false,
+            "WeightedGraphLoaded": true,
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": false
+        }
+    },
+    {
+        "id": "n14",
+        "title": "Dropdown Menu: Node -> Node Coloring (Loading From Database)",
+        "text": "",
+        "options": {
+            "Default": "Node coloring should be disabled",
+            "Dropdown Menu: Load From Database -> Network Type: Gene Regulatory": "Node coloring should be enabled",
+            "Dropdown Menu: Load From Database -> Network Type: Protein-Protein Physical Interactions": "Node coloring should be disabled",
+            "Sidebar Menu: Network -> Load From Database -> Network Type: Gene Regulatory": "Node coloring should be enabled",
+            "Sidebar Menu: Network -> Load From Database -> Network Type: Protein-Protein Physical Interactions": "Node coloring should be disabled"
+        },
+        "included": false,
+        "conditional": "when loading from database",
+        "availability": {
+            "NoGraphLoaded": false,
+            "WeightedGraphLoaded": true,
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": false
+        }
+    },
+    {
+        "id": "n15",
+        "title": "Sidebar Menu: Node Coloring (Opening File)",
+        "text": "",
+        "options": {
+            "Default": "Node coloring should be disabled",
+            "Dropdown Menu: Open File": "Node coloring should be enabled if the relationship is not pp, otherwise be disabled",
+            "Sidebar Menu: Network -> Open File": "Node coloring should be enabled if the relationship is not pp, otherwise be disabled"
+        },
+        "included": false,
+        "conditional": "when opening file",
+        "availability": {
+            "NoGraphLoaded": false,
+            "WeightedGraphLoaded": true,
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": false
+        }
+    },
+    {
+        "id": "n16",
+        "title": "Dropdown Menu: Node -> Node Coloring (Network Mode: Protein-Protein Physical Interactions)",
+        "text": "",
+        "options": {
+            "Default": "Node coloring should be disabled",
+            "Check": "Node coloring should be enabled with warning message",
+            "Uncheck": "Node coloring should be disabled."
+        },
+        "included": false,
+        "conditional": "when network mode is Protein-Protein Physical Interactions",
+        "availability": {
+            "NoGraphLoaded": false,
+            "WeightedGraphLoaded": true,
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": true
+        }
+    },
+    {
+        "id": "n17",
+        "title": "Sidebar Menu: Node Coloring (Network Mode: Protein-Protein Physical Interactions)",
+        "text": "",
+        "options": {
+            "Default": "Node coloring should be enabled",
+            "Check": "Node coloring should be enabled without warning message",
+            "Uncheck": "Node coloring should be disabled."
+        },
+        "included": false,
+        "conditional": "when network mode is Protein-Protein Physical Interactions",
+        "availability": {
+            "NoGraphLoaded": false,
+            "WeightedGraphLoaded": true,
+            "UnWeightedGraphLoaded": true,
+            "PPIGraphLoaded": false
         }
     }
 ]
