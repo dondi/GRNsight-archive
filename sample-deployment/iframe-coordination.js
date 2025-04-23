@@ -10,13 +10,21 @@
  * Prerequisites: jQuery and the iFrame Resizer library (v4.1.1 at this writing) must already be
  *                loaded into the web browser when this script executes.
  */
-iFrameResize({
-  checkOrigin: ["http://localhost:8080", "http://localhost:5001"],
-  widthCalculationMethod: "taggedElement",
-  heightCalculationMethod: "taggedElement",
-  sizeWidth: true,
-  minWidth: 1081  // Based on minimum width page body and title elements.
-}, "iframe.embedded-demo");
+iFrameResize(
+  {
+    checkOrigin: [
+      "https://dondi.github.io",
+      "https://grnsight.lmucs.org",
+      "http://localhost://8080",
+      "http://localhost:5001",
+    ],
+    widthCalculationMethod: "taggedElement",
+    heightCalculationMethod: "taggedElement",
+    sizeWidth: true,
+    minWidth: 1081, // Based on minimum width page body and title elements.
+  },
+  "iframe.embedded-demo"
+);
 
 const HEIGHT_OFFSET = 53;
 const HEIGHT_PADDING = 20;
@@ -24,7 +32,7 @@ const HEIGHT_PADDING = 20;
 const SMALL_HEIGHT = 648 + HEIGHT_OFFSET;
 const MEDIUM_HEIGHT = 840 + HEIGHT_OFFSET;
 const LARGE_HEIGHT = 1080 + HEIGHT_OFFSET;
-const FIT_MARGIN = 4;  // A little space so that "fit" isn’t totally flush with window bounds.
+const FIT_MARGIN = 4; // A little space so that "fit" isn’t totally flush with window bounds.
 
 const sendDimensions = (destination, origin) => {
   const iframeOffset = $("iframe.embedded-demo").offset();
@@ -32,17 +40,16 @@ const sendDimensions = (destination, origin) => {
     {
       width: $(window).width() - iframeOffset.left,
       height: $(window).height() - FIT_MARGIN,
-      top: iframeOffset.top
+      top: iframeOffset.top,
     },
 
     origin
   );
 };
 
-window.addEventListener("message", event => {
-  if (event.origin !== "http://localhost:8080" && event.origin !== "http://localhost:5001") {
+window.addEventListener("message", (event) => {
+  if (event.origin !== "https://grnsight.lmucs.org" && event.origin !== "http://localhost:5001") {
     // Ignore any message that did not originate from the GRNsight web client server.
-    console.log("we do not send message from iframe-coordination");
     return;
   }
 
@@ -52,8 +59,5 @@ window.addEventListener("message", event => {
 });
 
 window.addEventListener("resize", () =>
-  sendDimensions(
-    document.querySelector("iframe.embedded-demo").contentWindow,
-    "http://localhost:5001/"
-  )
+  sendDimensions(document.querySelector("iframe.embedded-demo").contentWindow, "http://localhost:5001/")
 );
