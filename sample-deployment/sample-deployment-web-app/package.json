@@ -1,0 +1,20 @@
+{
+  "name": "dummy-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "superstatic": "^9.2.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "scripts": {
+    "start-dev": "superstatic public --port 8080 --host localhost"
+  }
+}
